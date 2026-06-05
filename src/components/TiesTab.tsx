@@ -53,17 +53,17 @@ export default function TiesTab({ onOpenQuote }: TiesTabProps) {
             <h4 className="text-white text-sm font-semibold mb-4">
               Standard Tensile Capacity Profiles
             </h4>
-            <div className="overflow-x-auto">
-              <table className="w-full text-left text-xs border-collapse">
+            <div className="overflow-x-auto scrollbar-none">
+              <table className="w-full min-w-[500px] text-left text-xs border-collapse">
                 <thead>
-                  <tr className="border-b border-white/10 text-zinc-500">
-                    <th className="py-2 font-semibold">Part Family</th>
-                    <th className="py-2 font-semibold">Lengths Available</th>
-                    <th className="py-2 font-semibold">Bundle Tensile Limit</th>
+                  <tr className="border-b border-white/10 text-zinc-500 whitespace-nowrap">
+                    <th className="py-2 font-semibold pr-4">Part Family</th>
+                    <th className="py-2 font-semibold pr-4">Lengths Available</th>
+                    <th className="py-2 font-semibold pr-4">Bundle Tensile Limit</th>
                     <th className="py-2 font-semibold">Material Grade</th>
                   </tr>
                 </thead>
-                <tbody className="divide-y divide-white/5 text-zinc-300">
+                <tbody className="divide-y divide-white/5 text-zinc-300 whitespace-nowrap">
                   <tr>
                     <td className="py-2.5 font-mono">CT-100</td>
                     <td className="py-2.5">100 mm (4 in)</td>

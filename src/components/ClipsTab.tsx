@@ -45,17 +45,17 @@ export default function ClipsTab({ onOpenQuote }: ClipsTabProps) {
           {/* Table of sizes */}
           <div className="mt-8 border-t border-white/5 pt-6">
             <h4 className="text-white text-sm font-semibold mb-4">Standard Diameter Offerings</h4>
-            <div className="overflow-x-auto">
-              <table className="w-full text-left text-xs border-collapse">
+            <div className="overflow-x-auto scrollbar-none">
+              <table className="w-full min-w-[500px] text-left text-xs border-collapse">
                 <thead>
-                  <tr className="border-b border-white/10 text-zinc-500">
-                    <th className="py-2 font-semibold">Size ID</th>
-                    <th className="py-2 font-semibold">Supported Cable Diameters</th>
-                    <th className="py-2 font-semibold">Form Factor</th>
+                  <tr className="border-b border-white/10 text-zinc-500 whitespace-nowrap">
+                    <th className="py-2 font-semibold pr-4">Size ID</th>
+                    <th className="py-2 font-semibold pr-4">Supported Cable Diameters</th>
+                    <th className="py-2 font-semibold pr-4">Form Factor</th>
                     <th className="py-2 font-semibold">Packaging Unit</th>
                   </tr>
                 </thead>
-                <tbody className="divide-y divide-white/5 text-zinc-300">
+                <tbody className="divide-y divide-white/5 text-zinc-300 whitespace-nowrap">
                   <tr>
                     <td className="py-2.5 font-mono">CC-4MM</td>
                     <td className="py-2.5">3.5mm - 4.5mm</td>

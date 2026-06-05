@@ -32,7 +32,7 @@ export default function Products() {
 
       {/* 2. Switcher Tabs */}
       <div className="flex justify-center mb-12">
-        <div className="flex p-1.5 rounded-full bg-[#121218] border border-white/5 relative">
+        <div className="flex p-1 rounded-full bg-[#121218] border border-white/5 relative max-w-full overflow-x-auto scrollbar-none">
           {([
             { id: "capacitors", label: "Capacitors", icon: Cpu },
             { id: "clips", label: "Cable Clips", icon: Layers },
@@ -44,7 +44,7 @@ export default function Products() {
               <button
                 key={tab.id}
                 onClick={() => setActiveTab(tab.id)}
-                className={`relative px-6 py-3 rounded-full text-sm font-semibold tracking-wide flex items-center gap-2 transition-colors duration-300 ${
+                className={`relative px-3.5 sm:px-6 py-2.5 sm:py-3 rounded-full text-xs sm:text-sm font-semibold tracking-wide flex items-center gap-1.5 sm:gap-2 transition-colors duration-300 shrink-0 ${
                   isActive ? "text-white" : "text-zinc-400 hover:text-zinc-200"
                 }`}
               >
@@ -55,8 +55,8 @@ export default function Products() {
                     transition={{ type: "spring", stiffness: 380, damping: 30 }}
                   />
                 )}
-                <Icon className="h-4 w-4 relative z-10" />
-                <span className="relative z-10">{tab.label}</span>
+                <Icon className="h-3.5 w-3.5 sm:h-4 sm:w-4 relative z-10 shrink-0" />
+                <span className="relative z-10 whitespace-nowrap">{tab.label}</span>
               </button>
             );
           })}

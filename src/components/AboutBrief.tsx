@@ -18,6 +18,10 @@ export default function AboutBrief() {
     <section className="relative py-20 px-6 overflow-hidden">
       <div className="absolute inset-0 bg-[#0d0d11]/80 -skew-y-2 origin-top-left z-0 h-full w-full" />
       
+      {/* Background glowing red accents */}
+      <div className="absolute top-[10%] right-[-5%] h-[300px] w-[300px] rounded-full bg-primary/10 filter blur-[100px] pointer-events-none z-0 animate-pulse-slow" />
+      <div className="absolute bottom-[-10%] left-[-5%] h-[250px] w-[250px] rounded-full bg-primary/8 filter blur-[80px] pointer-events-none z-0" />
+      
       <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 items-center relative z-10">
         
         {/* Left Column: Factory Image & Overlapping details collage */}
@@ -33,13 +37,13 @@ export default function AboutBrief() {
           </div>
           
           {/* Overlapping Tech card */}
-          <div className="absolute bottom-6 right-6 left-12 glassmorphism rounded-2xl p-5 border border-white/10 shadow-2xl transform translate-x-2 translate-y-2 hover:translate-x-0 hover:translate-y-0 transition-transform duration-300">
-            <div className="flex items-start justify-between gap-4">
+          <div className="absolute bottom-6 left-6 right-6 sm:left-12 sm:right-6 glassmorphism rounded-2xl p-5 border border-white/10 shadow-2xl transform translate-x-2 translate-y-2 hover:translate-x-0 hover:translate-y-0 transition-transform duration-300">
+            <div className="flex flex-col sm:flex-row items-start gap-3 sm:gap-4">
               <div className="h-10 w-10 rounded-xl bg-primary/10 flex items-center justify-center border border-primary/20 text-primary shrink-0">
                 <Cpu className="h-5 w-5" />
               </div>
               <div>
-                <h4 className="text-white font-bold text-sm">
+                <h4 className="text-white font-bold text-sm sm:text-base">
                   Premium Materials Only
                 </h4>
                 <p className="text-zinc-400 text-xs leading-normal mt-1">
