@@ -14,9 +14,51 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
           {/* Brand Info Column */}
           <div className="flex flex-col gap-4">
-            <Link href="/" className="flex items-center gap-2">
-              <span className="text-2xl font-bold tracking-wider text-white">ARCOS</span>
-              <span className="text-xs uppercase text-primary font-bold tracking-[0.2em] mt-1">Capacitors</span>
+            <Link href="/" className="flex items-center gap-3 group">
+              <div className="relative h-9 w-11 flex items-center justify-center">
+                <svg
+                  viewBox="0 0 100 80"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="h-full w-full transform group-hover:scale-105 transition-transform duration-300"
+                >
+                  <defs>
+                    <linearGradient id="footerLogoGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                      <stop offset="0%" stopColor="#ff4d55" />
+                      <stop offset="60%" stopColor="#d2232a" />
+                      <stop offset="100%" stopColor="#8d1317" />
+                    </linearGradient>
+                    <filter id="footerGlow">
+                      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+                      <feMerge>
+                        <feMergeNode in="coloredBlur"/>
+                        <feMergeNode in="SourceGraphic"/>
+                      </feMerge>
+                    </filter>
+                  </defs>
+                  <path
+                    d="M15 70 
+                       C 30 25, 40 5, 52 10 
+                       C 62 14, 52 45, 68 50 
+                       C 80 54, 90 54, 95 54
+                       L 92 63
+                       C 82 63, 76 63, 62 58
+                       C 48 53, 50 25, 44 28
+                       C 38 31, 26 55, 20 70
+                       Z"
+                    fill="url(#footerLogoGrad)"
+                    filter="url(#footerGlow)"
+                  />
+                </svg>
+              </div>
+              <div className="flex flex-col">
+                <span className="text-xl font-bold tracking-wider text-white leading-none">
+                  ARCOS
+                </span>
+                <span className="text-[9px] uppercase tracking-[0.25em] text-primary font-semibold leading-none mt-1">
+                  Capacitors
+                </span>
+              </div>
             </Link>
             <p className="text-zinc-400 text-sm leading-relaxed mt-2">
               ARCOS (M.G. Industries) is a premier manufacturer of high-end capacitors, cable clips, and cable ties, engineered for reliability, safety, and durability since 2015.

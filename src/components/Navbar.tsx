@@ -165,10 +165,52 @@ export default function Navbar() {
             >
               <div>
                 <div className="flex items-center justify-between mb-8">
-                  <div className="flex items-center gap-2">
-                    <span className="text-xl font-bold tracking-wider text-white">ARCOS</span>
-                    <span className="text-[10px] text-primary font-bold">CAPACITORS</span>
-                  </div>
+                  <Link href="/" onClick={() => setMobileMenuOpen(false)} className="flex items-center gap-2.5 group">
+                    <div className="relative h-8 w-10 flex items-center justify-center">
+                      <svg
+                        viewBox="0 0 100 80"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                        className="h-full w-full transform group-hover:scale-105 transition-transform duration-300"
+                      >
+                        <defs>
+                          <linearGradient id="mobileLogoGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" stopColor="#ff4d55" />
+                            <stop offset="60%" stopColor="#d2232a" />
+                            <stop offset="100%" stopColor="#8d1317" />
+                          </linearGradient>
+                          <filter id="mobileGlow">
+                            <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+                            <feMerge>
+                              <feMergeNode in="coloredBlur"/>
+                              <feMergeNode in="SourceGraphic"/>
+                            </feMerge>
+                          </filter>
+                        </defs>
+                        <path
+                          d="M15 70 
+                             C 30 25, 40 5, 52 10 
+                             C 62 14, 52 45, 68 50 
+                             C 80 54, 90 54, 95 54
+                             L 92 63
+                             C 82 63, 76 63, 62 58
+                             C 48 53, 50 25, 44 28
+                             C 38 31, 26 55, 20 70
+                             Z"
+                          fill="url(#mobileLogoGrad)"
+                          filter="url(#mobileGlow)"
+                        />
+                      </svg>
+                    </div>
+                    <div className="flex flex-col">
+                      <span className="text-lg font-bold tracking-wider text-white leading-none">
+                        ARCOS
+                      </span>
+                      <span className="text-[8px] uppercase tracking-[0.25em] text-primary font-semibold leading-none mt-0.5">
+                        Capacitors
+                      </span>
+                    </div>
+                  </Link>
                   <button
                     onClick={() => setMobileMenuOpen(false)}
                     className="p-2 text-zinc-400 hover:text-white transition-colors duration-200"

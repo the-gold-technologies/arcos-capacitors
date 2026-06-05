@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { ShieldCheck } from "lucide-react";
 
@@ -67,6 +67,14 @@ const workflowSteps: WorkflowStep[] = [
 export default function WorkflowVisualizer() {
   const [activeStep, setActiveStep] = useState<number>(1);
 
+  // Auto-advance steps every 4 seconds
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setActiveStep((prev) => (prev === workflowSteps.length ? 1 : prev + 1));
+    }, 4000);
+    return () => clearInterval(timer);
+  }, [activeStep]);
+
   return (
     <section className="mb-24">
       <div className="text-center max-w-xl mx-auto mb-12">
@@ -83,27 +91,39 @@ export default function WorkflowVisualizer() {
 
       {/* Visual Assembly Pipeline Nodes */}
       <div className="glassmorphism rounded-3xl p-6 sm:p-10 border border-white/5 relative overflow-hidden">
-        <div className="absolute top-0 left-0 right-0 h-[2px] bg-white/5 z-0" style={{ top: "45px" }} />
         
-        {/* Step Bubbles */}
-        <div className="relative z-10 flex flex-wrap justify-between gap-4 sm:gap-6 mb-12">
+        {/* Step Bubbles Wrapper (Scrollable but hides scrollbar) */}
+        <div className="relative z-10 flex flex-nowrap justify-between gap-4 sm:gap-6 mb-12 overflow-x-auto scrollbar-none py-3 pb-5">
+          
+          {/* Background Connector Line Track (Centered vertically and horizontally behind circles) */}
+          <div className="absolute left-[36px] right-[36px] h-[2px] bg-white/10 top-[36px] -z-10" />
+          
+          {/* Animated Active Progress Line (Fills up smoothly as steps change) */}
+          <motion.div 
+            className="absolute left-[36px] h-[2px] bg-primary top-[36px] -z-10 shadow-[0_0_10px_rgba(210,35,42,0.8)]"
+            animate={{ width: `calc(((100% - 72px) * ${activeStep - 1}) / ${workflowSteps.length - 1})` }}
+            transition={{ duration: 0.8, ease: [0.25, 1, 0.5, 1] }}
+          />
+
           {workflowSteps.map((ws) => {
             const isActive = activeStep === ws.step;
             return (
               <button
                 key={ws.step}
                 onClick={() => setActiveStep(ws.step)}
-                className="flex flex-col items-center gap-2 group focus:outline-none"
+                className="flex flex-col items-center gap-2 group focus:outline-none shrink-0 min-w-[72px]"
               >
-                <div 
+                <motion.div 
+                  animate={isActive ? { scale: 1.1 } : { scale: 1 }}
+                  transition={{ duration: 0.4, ease: "easeOut" }}
                   className={`h-12 w-12 rounded-full flex items-center justify-center font-mono font-bold text-sm border transition-all duration-300 ${
                     isActive 
-                      ? "bg-primary border-primary text-white shadow-[0_0_15px_rgba(210,35,42,0.5)]" 
+                      ? "bg-primary border-primary text-white shadow-[0_0_15px_rgba(210,35,42,0.6)]" 
                       : "bg-[#121217] border-white/10 text-zinc-400 group-hover:text-white group-hover:border-white/20"
                   }`}
                 >
                   {ws.step}
-                </div>
+                </motion.div>
                 <span className={`text-[11px] font-semibold tracking-wide uppercase transition-colors ${isActive ? "text-primary-light" : "text-zinc-500 group-hover:text-zinc-300"}`}>
                   {ws.title.split(" ")[0]}
                 </span>
