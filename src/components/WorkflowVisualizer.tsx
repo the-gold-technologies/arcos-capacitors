@@ -89,7 +89,7 @@ export default function WorkflowVisualizer() {
             Interactive Production Stages
           </h2>
           <p className="text-zinc-400 text-xs sm:text-sm mt-3">
-            Click each process node below to follow a capacitor's journey through our Noida factory.
+            Click each process node below to follow a capacitor&apos;s journey through our Noida factory.
           </p>
         </div>
 

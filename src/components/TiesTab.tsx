@@ -2,9 +2,10 @@
 
 import React from "react";
 import { motion } from "framer-motion";
+import { QuoteProduct } from "@/app/products/page";
 
 interface TiesTabProps {
-  onOpenQuote: (product: any) => void;
+  onOpenQuote: (product: QuoteProduct) => void;
 }
 
 export default function TiesTab({ onOpenQuote }: TiesTabProps) {

@@ -3,13 +3,10 @@
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { X, User, Mail, Phone, Check } from "lucide-react";
+import { QuoteProduct } from "@/app/products/page";
 
 interface QuoteDrawerProps {
-  product: {
-    name: string;
-    capacitance: string;
-    type: string;
-  } | null;
+  product: QuoteProduct | null;
   onClose: () => void;
 }
 
@@ -91,12 +88,12 @@ export default function QuoteDrawer({ product, onClose }: QuoteDrawerProps) {
               <div>
                 <span className="text-zinc-600 block">Spec Range:</span>
                 <span className="font-semibold text-zinc-300">
-                  {product.capacitance}
+                  {product.capacitance || "N/A"}
                 </span>
               </div>
               <div>
                 <span className="text-zinc-600 block">Category:</span>
-                <span className="text-zinc-300">{product.type}</span>
+                <span className="text-zinc-300">{product.type || "General Category"}</span>
               </div>
             </div>
           </div>

@@ -8,11 +8,19 @@ import ClipsTab from "@/components/ClipsTab";
 import TiesTab from "@/components/TiesTab";
 import QuoteDrawer from "@/components/QuoteDrawer";
 
+export interface QuoteProduct {
+  id: string;
+  name: string;
+  capacitance?: string;
+  voltage?: string;
+  type?: string;
+}
+
 type ProductTab = "capacitors" | "clips" | "ties";
 
 export default function Products() {
   const [activeTab, setActiveTab] = useState<ProductTab>("capacitors");
-  const [quoteProduct, setQuoteProduct] = useState<any | null>(null);
+  const [quoteProduct, setQuoteProduct] = useState<QuoteProduct | null>(null);
 
   return (
     <div className="relative w-full max-w-7xl mx-auto px-6 py-12">

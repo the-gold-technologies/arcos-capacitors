@@ -27,7 +27,7 @@ export default function Hero() {
             transition={{ duration: 0.6, delay: 0.1 }}
             className="text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight text-white leading-[1.1] font-sans"
           >
-            India's Trusted Manufacturer of <br />
+            India&apos;s Trusted Manufacturer of <br />
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary-light via-primary to-primary-dark text-glow">
               Capacitors, Cable Clips & Ties
             </span>
