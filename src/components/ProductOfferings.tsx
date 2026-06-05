@@ -17,10 +17,10 @@ export default function ProductOfferings() {
           <span className="text-primary text-sm font-bold uppercase tracking-wider">
             Product Categories
           </span>
-          <h2 className="text-3xl sm:text-4xl font-bold tracking-tight text-white mt-3">
+          <h2 className="text-3xl sm:text-4xl font-bold tracking-tight text-zinc-950 mt-3">
             Diversified Electrical Component Portfolio
           </h2>
-          <p className="text-zinc-400 text-sm sm:text-base mt-4">
+          <p className="text-zinc-600 text-sm sm:text-base mt-4">
             Custom-engineered electrical accessories designed to handle high
             loads, harsh temperatures, and structural strain.
           </p>
@@ -32,7 +32,7 @@ export default function ProductOfferings() {
           {/* Card 1: Capacitors (Occupies 7 cols on medium/large) */}
           <motion.div 
             whileHover={{ y: -5 }}
-            className="md:col-span-7 rounded-3xl glassmorphism p-6 sm:p-8 flex flex-col justify-between min-h-[380px] border border-white/5 relative overflow-hidden group shadow-lg"
+            className="md:col-span-7 rounded-3xl glassmorphism p-6 sm:p-8 flex flex-col justify-between min-h-[380px] border border-zinc-200/40 relative overflow-hidden group shadow-lg"
           >
             {/* Ambient Red glow background on hover */}
             <div className="absolute -right-20 -top-20 h-60 w-60 rounded-full bg-primary/5 group-hover:bg-primary/10 blur-3xl transition-colors duration-500" />
@@ -41,10 +41,10 @@ export default function ProductOfferings() {
               <div className="h-12 w-12 rounded-2xl bg-primary/10 flex items-center justify-center border border-primary/20">
                 <Cpu className="h-6 w-6 text-primary" />
               </div>
-              <h3 className="text-2xl font-bold text-white mt-6">
+              <h3 className="text-2xl font-bold text-zinc-950 mt-6">
                 Electrical Capacitors
               </h3>
-              <p className="text-zinc-400 text-sm leading-relaxed mt-3 max-w-md">
+              <p className="text-zinc-600 text-sm leading-relaxed mt-3 max-w-md">
                 Superior electrical capacitors featuring metallized
                 polypropylene film and built-in safety disconnectors. Designed
                 for appliances, air conditioners, fans, water pumps, and APFC
@@ -57,7 +57,7 @@ export default function ProductOfferings() {
                 (type) => (
                   <span
                     key={type}
-                    className="text-[11px] font-semibold bg-white/5 border border-white/5 px-3 py-1 rounded-full text-zinc-300"
+                    className="text-[11px] font-semibold bg-zinc-100 border border-zinc-200/50 px-3 py-1 rounded-full text-zinc-600"
                   >
                     {type}
                   </span>
@@ -65,7 +65,7 @@ export default function ProductOfferings() {
               )}
             </div>
 
-            <div className="relative z-10 flex flex-col sm:flex-row sm:items-center justify-between gap-3 sm:gap-4 mt-8 border-t border-white/5 pt-4">
+            <div className="relative z-10 flex flex-col sm:flex-row sm:items-center justify-between gap-3 sm:gap-4 mt-8 border-t border-zinc-200/60 pt-4">
               <span className="text-xs text-zinc-500">
                 Capacitance Range: 1 - 100 μF
               </span>
@@ -81,7 +81,7 @@ export default function ProductOfferings() {
           {/* Card 2: Cable Clips (Occupies 5 cols) */}
           <motion.div 
             whileHover={{ y: -5 }}
-            className="md:col-span-5 rounded-3xl glassmorphism p-6 sm:p-8 flex flex-col justify-between min-h-[380px] border border-white/5 relative overflow-hidden group shadow-lg"
+            className="md:col-span-5 rounded-3xl glassmorphism p-6 sm:p-8 flex flex-col justify-between min-h-[380px] border border-zinc-200/40 relative overflow-hidden group shadow-lg"
           >
             <div className="absolute -right-20 -top-20 h-60 w-60 rounded-full bg-primary/5 group-hover:bg-primary/10 blur-3xl transition-colors duration-500" />
             
@@ -89,17 +89,17 @@ export default function ProductOfferings() {
               <div className="h-12 w-12 rounded-2xl bg-primary/10 flex items-center justify-center border border-primary/20">
                 <Layers className="h-6 w-6 text-primary" />
               </div>
-              <h3 className="text-2xl font-bold text-white mt-6">
+              <h3 className="text-2xl font-bold text-zinc-950 mt-6">
                 Cable Clips
               </h3>
-              <p className="text-zinc-400 text-sm leading-relaxed mt-3">
+              <p className="text-zinc-600 text-sm leading-relaxed mt-3">
                 High-impact PE cable clips fitted with tough, zinc-plated steel
                 nails. Resists splitting under hammer impact and maintains hold
                 in wood, masonry, and plasterboard.
               </p>
             </div>
 
-            <div className="relative z-10 flex flex-col sm:flex-row sm:items-center justify-between gap-3 sm:gap-4 mt-8 border-t border-white/5 pt-4">
+            <div className="relative z-10 flex flex-col sm:flex-row sm:items-center justify-between gap-3 sm:gap-4 mt-8 border-t border-zinc-200/60 pt-4">
               <span className="text-xs text-zinc-500">
                 All standard shapes & diameters
               </span>
@@ -115,7 +115,7 @@ export default function ProductOfferings() {
           {/* Card 3: Cable Ties (Occupies 5 cols) */}
           <motion.div 
             whileHover={{ y: -5 }}
-            className="md:col-span-5 rounded-3xl glassmorphism p-6 sm:p-8 flex flex-col justify-between min-h-[380px] border border-white/5 relative overflow-hidden group shadow-lg"
+            className="md:col-span-5 rounded-3xl glassmorphism p-6 sm:p-8 flex flex-col justify-between min-h-[380px] border border-zinc-200/40 relative overflow-hidden group shadow-lg"
           >
             <div className="absolute -right-20 -top-20 h-60 w-60 rounded-full bg-primary/5 group-hover:bg-primary/10 blur-3xl transition-colors duration-500" />
             
@@ -123,17 +123,17 @@ export default function ProductOfferings() {
               <div className="h-12 w-12 rounded-2xl bg-primary/10 flex items-center justify-center border border-primary/20">
                 <Boxes className="h-6 w-6 text-primary" />
               </div>
-              <h3 className="text-2xl font-bold text-white mt-6">
+              <h3 className="text-2xl font-bold text-zinc-950 mt-6">
                 Nylon Cable Ties
               </h3>
-              <p className="text-zinc-400 text-sm leading-relaxed mt-3">
+              <p className="text-zinc-600 text-sm leading-relaxed mt-3">
                 UV-resistant, flame-retardant Nylon 66 wire management straps.
                 Engineered with self-locking teeth for secure bundle operations
                 in home appliances and industrial panels.
               </p>
             </div>
 
-            <div className="relative z-10 flex flex-col sm:flex-row sm:items-center justify-between gap-3 sm:gap-4 mt-8 border-t border-white/5 pt-4">
+            <div className="relative z-10 flex flex-col sm:flex-row sm:items-center justify-between gap-3 sm:gap-4 mt-8 border-t border-zinc-200/60 pt-4">
               <span className="text-xs text-zinc-500">
                 High Tensile Strengths
               </span>
@@ -149,7 +149,7 @@ export default function ProductOfferings() {
           {/* Card 4: OEM Manufacturing (Occupies 7 cols) */}
           <motion.div 
             whileHover={{ y: -5 }}
-            className="md:col-span-7 rounded-3xl glassmorphism p-6 sm:p-8 flex flex-col justify-between min-h-[380px] border border-white/5 relative overflow-hidden group shadow-lg"
+            className="md:col-span-7 rounded-3xl glassmorphism p-6 sm:p-8 flex flex-col justify-between min-h-[380px] border border-zinc-200/40 relative overflow-hidden group shadow-lg"
           >
             <div className="absolute -right-20 -top-20 h-60 w-60 rounded-full bg-primary/5 group-hover:bg-primary/10 blur-3xl transition-colors duration-500" />
             
@@ -157,10 +157,10 @@ export default function ProductOfferings() {
               <div className="h-12 w-12 rounded-2xl bg-primary/10 flex items-center justify-center border border-primary/20">
                 <Wrench className="h-6 w-6 text-primary" />
               </div>
-              <h3 className="text-2xl font-bold text-white mt-6">
+              <h3 className="text-2xl font-bold text-zinc-950 mt-6">
                 Private Label & OEM Support
               </h3>
-              <p className="text-zinc-400 text-sm leading-relaxed mt-3 max-w-md">
+              <p className="text-zinc-600 text-sm leading-relaxed mt-3 max-w-md">
                 We design and manufacture capacitors customized with your
                 company branding, technical parameters, and specific terminal
                 connectors. Fully aligned with international electrical
@@ -168,7 +168,7 @@ export default function ProductOfferings() {
               </p>
             </div>
 
-            <div className="relative z-10 flex flex-col sm:flex-row sm:items-center justify-between gap-3 sm:gap-4 mt-8 border-t border-white/5 pt-4">
+            <div className="relative z-10 flex flex-col sm:flex-row sm:items-center justify-between gap-3 sm:gap-4 mt-8 border-t border-zinc-200/60 pt-4">
               <span className="text-xs text-zinc-500">
                 Fast production turnaround
               </span>

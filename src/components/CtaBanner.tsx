@@ -25,7 +25,7 @@ export default function CtaBanner() {
         <div className="relative z-10 shrink-0">
           <Link 
             href="/contact?type=quote"
-            className="inline-flex items-center gap-2 px-8 py-4 bg-white text-dark-bg font-extrabold rounded-full hover:bg-zinc-100 hover:scale-[1.05] active:scale-[0.95] transition-all duration-300 shadow-xl"
+            className="inline-flex items-center gap-2 px-8 py-4 bg-white text-zinc-950 font-extrabold rounded-full hover:bg-zinc-100 hover:scale-[1.05] active:scale-[0.95] transition-all duration-300 shadow-xl"
           >
             Get Custom Quote
             <ArrowRight className="h-5 w-5" />

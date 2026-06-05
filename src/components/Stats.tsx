@@ -53,14 +53,14 @@ export default function Stats() {
                 {stat.label}
               </span>
               <div className="flex items-baseline flex-wrap justify-center lg:justify-start gap-1 mt-1.5">
-                <span className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-white tracking-tight font-mono">
+                <span className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-zinc-950 tracking-tight font-mono">
                   {stat.val}
                 </span>
                 <span className="text-primary-light font-bold text-xs sm:text-sm md:text-lg whitespace-nowrap">
                   {stat.suffix}
                 </span>
               </div>
-              <span className="text-zinc-400 text-[11px] sm:text-xs mt-1 leading-normal">{stat.desc}</span>
+              <span className="text-zinc-600 text-[11px] sm:text-xs mt-1 leading-normal">{stat.desc}</span>
             </div>
           ))}
         </motion.div>

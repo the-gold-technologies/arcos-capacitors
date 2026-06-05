@@ -17,49 +17,56 @@ const workflowSteps: WorkflowStep[] = [
     step: 1,
     title: "Film Winding",
     machine: "Automatic Capacitor Winding Machines",
-    description: "High-speed winding of metalized polypropylene film (MPP) under controlled mechanical tension. Regulates capacitance thickness.",
+    description:
+      "High-speed winding of metalized polypropylene film (MPP) under controlled mechanical tension. Regulates capacitance thickness.",
     metrics: "Precision winding within ±1% tolerance",
   },
   {
     step: 2,
     title: "Element Pressing",
     machine: "Element Pressing Machines",
-    description: "Flat-pressing of coiled cylindrical film elements to match specific rectangular casings or flat packing sizes.",
+    description:
+      "Flat-pressing of coiled cylindrical film elements to match specific rectangular casings or flat packing sizes.",
     metrics: "Controlled hydraulic compression",
   },
   {
     step: 3,
     title: "Metal Spraying & Welding",
     machine: "End Spray & Welding Machines",
-    description: "Spraying zinc/tin alloy onto capacitor edges (ends) to create lead contact layers, followed by automatic welding of copper wire leads.",
+    description:
+      "Spraying zinc/tin alloy onto capacitor edges (ends) to create lead contact layers, followed by automatic welding of copper wire leads.",
     metrics: "Low electrical contact resistance (ESR)",
   },
   {
     step: 4,
     title: "Vacuum Drying",
     machine: "Vacuum Drying Chambers",
-    description: "Baking elements under high vacuum pressure to extract moisture, preventing internal corrosion and voltage flashovers.",
+    description:
+      "Baking elements under high vacuum pressure to extract moisture, preventing internal corrosion and voltage flashovers.",
     metrics: "Bake time: 24 - 48 Hours",
   },
   {
     step: 5,
     title: "Resin Potting",
     machine: "Resin Filling & PU Machines",
-    description: "Casing encapsulation with high-durability epoxy resin or polyurethane (PU) fill to protect components against dampness and shock.",
+    description:
+      "Casing encapsulation with high-durability epoxy resin or polyurethane (PU) fill to protect components against dampness and shock.",
     metrics: "Flame retardant, shock absorption",
   },
   {
     step: 6,
     title: "In-line Testing",
     machine: "Capacitance & Final Testers",
-    description: "Automated high-voltage test scans. Checks capacitance value deviation, dissipation limits, and seal structural leakage.",
+    description:
+      "Automated high-voltage test scans. Checks capacitance value deviation, dissipation limits, and seal structural leakage.",
     metrics: "100% components inspected",
   },
   {
     step: 7,
     title: "Laser Printing",
     machine: "Laser & Pad Printing Systems",
-    description: "Etching ratings, safety marks (CE, ISI), batch codes, and custom OEM branding onto the plastic capacitor shells.",
+    description:
+      "Etching ratings, safety marks (CE, ISI), batch codes, and custom OEM branding onto the plastic capacitor shells.",
     metrics: "Permanent ink-free branding",
   },
 ];
@@ -76,11 +83,11 @@ export default function WorkflowVisualizer() {
   }, [activeStep]);
 
   return (
-    <section className="relative mb-24 py-4">
+    <section className="relative w-full bg-[#09090b] border-y border-white/[0.06] py-16 mb-24 overflow-hidden">
       {/* Central energy backlight glow behind the visualizer card */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 h-[400px] w-[500px] rounded-full bg-primary/10 filter blur-[120px] pointer-events-none -z-10 animate-pulse-slow" />
 
-      <div className="relative z-10">
+      <div className="max-w-7xl mx-auto px-6 relative z-10">
         <div className="text-center max-w-xl mx-auto mb-12">
           <span className="text-primary text-sm font-bold uppercase tracking-wider">
             Visual Assembly Line
@@ -89,26 +96,26 @@ export default function WorkflowVisualizer() {
             Interactive Production Stages
           </h2>
           <p className="text-zinc-400 text-xs sm:text-sm mt-3">
-            Click each process node below to follow a capacitor&apos;s journey through our Noida factory.
+            Click each process node below to follow a capacitor&apos;s journey
+            through our Noida factory.
           </p>
         </div>
 
         {/* Visual Assembly Pipeline Nodes */}
-        <div className="glassmorphism rounded-3xl p-6 sm:p-10 border border-white/5 relative overflow-hidden">
-          
+        <div className="rounded-3xl p-6 sm:p-10 border border-white/[0.08] relative overflow-hidden bg-[#121217] shadow-xl">
           {/* Step Bubbles Wrapper (Scrollable but hides scrollbar) */}
           <div className="overflow-x-auto scrollbar-none mb-12 -mx-4 px-4 sm:-mx-0 sm:px-0">
-            
             {/* Inner Relative Container (Expands to full scrollable content width) */}
             <div className="relative z-10 flex flex-nowrap justify-between gap-4 sm:gap-6 py-3 pb-5 min-w-max w-full">
-              
               {/* Background Connector Line Track (Centered vertically and horizontally behind circles) */}
-              <div className="absolute left-[36px] right-[36px] h-[2px] bg-white/10 top-[36px] -z-10" />
-              
+              <div className="absolute left-[36px] right-[36px] h-[2px] bg-zinc-800 top-[36px] -z-10" />
+
               {/* Animated Active Progress Line (Fills up smoothly as steps change) */}
-              <motion.div 
-                className="absolute left-[36px] h-[2px] bg-primary top-[36px] -z-10 shadow-[0_0_10px_rgba(210,35,42,0.8)]"
-                animate={{ width: `calc(((100% - 72px) * ${activeStep - 1}) / ${workflowSteps.length - 1})` }}
+              <motion.div
+                className="absolute left-[36px] h-[2px] bg-primary top-[36px] -z-10 shadow-[0_0_8px_rgba(210,35,42,0.5)]"
+                animate={{
+                  width: `calc(((100% - 72px) * ${activeStep - 1}) / ${workflowSteps.length - 1})`,
+                }}
                 transition={{ duration: 0.8, ease: [0.25, 1, 0.5, 1] }}
               />
 
@@ -120,18 +127,20 @@ export default function WorkflowVisualizer() {
                     onClick={() => setActiveStep(ws.step)}
                     className="flex flex-col items-center gap-2 group focus:outline-none shrink-0 min-w-[72px]"
                   >
-                    <motion.div 
+                    <motion.div
                       animate={isActive ? { scale: 1.1 } : { scale: 1 }}
                       transition={{ duration: 0.4, ease: "easeOut" }}
                       className={`h-12 w-12 rounded-full flex items-center justify-center font-mono font-bold text-sm border transition-all duration-300 ${
-                        isActive 
-                          ? "bg-primary border-primary text-white shadow-[0_0_15px_rgba(210,35,42,0.6)]" 
-                          : "bg-[#121217] border-white/10 text-zinc-400 group-hover:text-white group-hover:border-white/20"
+                        isActive
+                          ? "bg-primary border-primary text-white shadow-[0_0_12px_rgba(210,35,42,0.4)]"
+                          : "bg-[#09090b] border-white/10 text-zinc-400 group-hover:text-white group-hover:border-white/20"
                       }`}
                     >
                       {ws.step}
                     </motion.div>
-                    <span className={`text-[11px] font-semibold tracking-wide uppercase transition-colors ${isActive ? "text-primary-light" : "text-zinc-500 group-hover:text-zinc-300"}`}>
+                    <span
+                      className={`text-[11px] font-semibold tracking-wide uppercase transition-colors ${isActive ? "text-primary-light" : "text-zinc-500 group-hover:text-zinc-300"}`}
+                    >
                       {ws.title.split(" ")[0]}
                     </span>
                   </button>
@@ -151,25 +160,31 @@ export default function WorkflowVisualizer() {
                   animate={{ opacity: 1, x: 0 }}
                   exit={{ opacity: 0, x: -20 }}
                   transition={{ duration: 0.3 }}
-                  className="grid grid-cols-1 md:grid-cols-12 gap-8 items-center bg-white/[0.01] border border-white/5 rounded-2xl p-6 sm:p-8"
+                  className="grid grid-cols-1 md:grid-cols-12 gap-8 items-center bg-[#09090c] border border-white/[0.06] rounded-2xl p-6 sm:p-8 shadow-inner"
                 >
                   <div className="md:col-span-8 space-y-4">
                     <div className="inline-flex items-center gap-2 text-xs font-semibold text-primary uppercase tracking-widest bg-primary/10 border border-primary/20 px-3 py-1 rounded-full">
                       Stage {ws.step}: Assembly Operation
                     </div>
-                    <h3 className="text-2xl font-bold text-white tracking-tight">{ws.title}</h3>
+                    <h3 className="text-2xl font-bold text-white tracking-tight">
+                      {ws.title}
+                    </h3>
                     <p className="text-zinc-300 text-sm leading-relaxed">
                       {ws.description}
                     </p>
-                    
-                    <div className="flex flex-col sm:flex-row sm:items-center gap-1.5 sm:gap-2.5 text-xs text-zinc-400 border-t border-white/5 pt-4">
-                      <span className="text-zinc-600">Equipment in Action:</span>
-                      <strong className="text-zinc-200 font-semibold">{ws.machine}</strong>
+
+                    <div className="flex flex-col sm:flex-row sm:items-center gap-1.5 sm:gap-2.5 text-xs text-zinc-400 border-t border-white/[0.08] pt-4">
+                      <span className="text-zinc-500">
+                        Equipment in Action:
+                      </span>
+                      <strong className="text-zinc-200 font-semibold">
+                        {ws.machine}
+                      </strong>
                     </div>
                   </div>
 
-                  <div className="md:col-span-4 bg-[#121218] border border-white/5 rounded-2xl p-5 flex flex-col justify-between h-full min-h-[160px]">
-                    <span className="text-[10px] text-zinc-500 font-bold uppercase tracking-wider">
+                  <div className="md:col-span-4 bg-[#121217] border border-white/[0.06] rounded-2xl p-5 flex flex-col justify-between h-full min-h-[160px]">
+                    <span className="text-[10px] text-zinc-400 font-bold uppercase tracking-wider">
                       Quality Threshold
                     </span>
                     <div className="my-3 flex items-center gap-3">
@@ -178,8 +193,9 @@ export default function WorkflowVisualizer() {
                         {ws.metrics}
                       </span>
                     </div>
-                    <span className="text-[10px] text-green-500 font-semibold flex items-center gap-1.5 mt-auto">
-                      <span className="h-1.5 w-1.5 rounded-full bg-green-500 animate-ping" /> Passed Inspection
+                    <span className="text-[10px] text-green-400 font-semibold flex items-center gap-1.5 mt-auto">
+                      <span className="h-1.5 w-1.5 rounded-full bg-green-400 animate-ping" />{" "}
+                      Passed Inspection
                     </span>
                   </div>
                 </motion.div>

@@ -135,37 +135,37 @@ export default function CapacitorsTab({ onOpenQuote }: CapacitorsTabProps) {
           <motion.div
             key={prod.id}
             whileHover={{ y: -4, borderColor: "rgba(210,35,42,0.3)" }}
-            className="bg-[#0f0f13] border border-white/5 rounded-2xl p-6 flex flex-col justify-between transition-all duration-300 relative group"
+            className="bg-white border border-zinc-200 rounded-2xl p-6 flex flex-col justify-between transition-all duration-300 relative group shadow-sm"
           >
             <div>
               <div className="flex items-start justify-between">
                 <span className="text-[10px] font-semibold text-primary uppercase bg-primary/10 border border-primary/20 px-2.5 py-1 rounded-full">
                   {prod.type}
                 </span>
-                <Cpu className="h-5 w-5 text-zinc-500 group-hover:text-primary transition-colors duration-300" />
+                <Cpu className="h-5 w-5 text-zinc-400 group-hover:text-primary transition-colors duration-300" />
               </div>
 
-              <h3 className="text-xl font-bold text-white mt-4 tracking-tight">{prod.name}</h3>
+              <h3 className="text-xl font-bold text-zinc-950 mt-4 tracking-tight">{prod.name}</h3>
               
               {/* Detailed Spec list */}
-              <div className="mt-4 space-y-2 border-t border-white/5 pt-4 text-xs">
+              <div className="mt-4 space-y-2 border-t border-zinc-200/60 pt-4 text-xs">
                 <div className="flex justify-between">
                   <span className="text-zinc-500">Capacitance:</span>
-                  <span className="text-zinc-300 font-mono font-semibold">{prod.capacitance}</span>
+                  <span className="text-zinc-800 font-mono font-semibold">{prod.capacitance}</span>
                 </div>
                 <div className="flex justify-between">
                   <span className="text-zinc-500">Voltage:</span>
-                  <span className="text-zinc-300 font-mono">{prod.voltage}</span>
+                  <span className="text-zinc-800 font-mono">{prod.voltage}</span>
                 </div>
                 <div className="mt-3">
                   <span className="text-zinc-500 block">Applications:</span>
-                  <span className="text-zinc-400 leading-relaxed block mt-1 font-medium">{prod.applications}</span>
+                  <span className="text-zinc-600 leading-relaxed block mt-1 font-medium">{prod.applications}</span>
                 </div>
               </div>
 
               <ul className="mt-4 space-y-1.5">
                 {prod.features.map((feat, idx) => (
-                  <li key={idx} className="flex items-center gap-2 text-[11px] text-zinc-400">
+                  <li key={idx} className="flex items-center gap-2 text-[11px] text-zinc-600">
                     <Check className="h-3.5 w-3.5 text-primary shrink-0" />
                     <span>{feat}</span>
                   </li>
@@ -173,10 +173,10 @@ export default function CapacitorsTab({ onOpenQuote }: CapacitorsTabProps) {
               </ul>
             </div>
 
-            <div className="mt-6 pt-4 border-t border-white/5">
+            <div className="mt-6 pt-4 border-t border-zinc-200/60">
               <button
                 onClick={() => onOpenQuote(prod)}
-                className="w-full justify-center inline-flex items-center gap-2 px-4 py-2.5 bg-white/5 border border-white/10 hover:border-primary hover:bg-primary text-white text-xs font-bold rounded-xl transition-all duration-300"
+                className="w-full justify-center inline-flex items-center gap-2 px-4 py-2.5 bg-zinc-100 border border-zinc-200 hover:border-primary hover:bg-primary text-zinc-900 hover:text-white text-xs font-bold rounded-xl transition-all duration-300"
               >
                 Request Quote & Info
                 <ChevronRight className="h-3.5 w-3.5" />

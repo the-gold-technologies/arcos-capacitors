@@ -16,14 +16,14 @@ const briefStrengths = [
 export default function AboutBrief() {
   return (
     <section className="relative py-20 px-6 overflow-hidden">
-      <div className="absolute inset-0 bg-[#0d0d11]/80 -skew-y-2 origin-top-left z-0 h-full w-full" />
-      
+      {/* Black primary background skewed, taller to fill the bottom slanted gap */}
+      <div className="absolute inset-0 bg-[#0d0d11] -skew-y-2 origin-top-left z-0 h-[calc(100%+80px)] w-full" />
+
       {/* Background glowing red accents */}
       <div className="absolute top-[10%] right-[-5%] h-[300px] w-[300px] rounded-full bg-primary/10 filter blur-[100px] pointer-events-none z-0 animate-pulse-slow" />
       <div className="absolute bottom-[-10%] left-[-5%] h-[250px] w-[250px] rounded-full bg-primary/8 filter blur-[80px] pointer-events-none z-0" />
-      
+
       <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 items-center relative z-10">
-        
         {/* Left Column: Factory Image & Overlapping details collage */}
         <div className="lg:col-span-5 relative flex justify-center h-[350px] lg:h-[450px] w-full">
           {/* Factory Image with slant border */}
@@ -31,13 +31,13 @@ export default function AboutBrief() {
             <img
               src="/arcos_factory_floor.png"
               alt="ARCOS Factory Noida"
-              className="w-full h-full object-cover opacity-80"
+              className="w-full h-full object-cover opacity-90"
             />
-            <div className="absolute inset-0 bg-gradient-to-tr from-dark-bg/90 via-dark-bg/25 to-transparent pointer-events-none" />
+            <div className="absolute inset-0 bg-gradient-to-tr from-black/85 via-black/20 to-transparent pointer-events-none" />
           </div>
-          
+
           {/* Overlapping Tech card */}
-          <div className="absolute bottom-6 left-6 right-6 sm:left-12 sm:right-6 glassmorphism rounded-2xl p-5 border border-white/10 shadow-2xl transform translate-x-2 translate-y-2 hover:translate-x-0 hover:translate-y-0 transition-transform duration-300">
+          <div className="absolute bottom-6 left-6 right-6 sm:left-12 sm:right-6 bg-black rounded-2xl p-5 border border-white/10 shadow-2xl transform translate-x-2 translate-y-2 hover:translate-x-0 hover:translate-y-0 transition-transform duration-300">
             <div className="flex flex-col sm:flex-row items-start gap-3 sm:gap-4">
               <div className="h-10 w-10 rounded-xl bg-primary/10 flex items-center justify-center border border-primary/20 text-primary shrink-0">
                 <Cpu className="h-5 w-5" />
@@ -66,10 +66,10 @@ export default function AboutBrief() {
           </h2>
           <p className="text-zinc-400 text-sm sm:text-base leading-relaxed mt-6">
             ARCOS, a leading brand of M.G. Industries, manufactures a
-            comprehensive range of electrical capacitors, cable clips, and
-            cable ties. We solve operational challenges like voltage
-            instability, high leakage currents, and short product lives by
-            utilizing high-end automated manufacturing processes.
+            comprehensive range of electrical capacitors, cable clips, and cable
+            ties. We solve operational challenges like voltage instability, high
+            leakage currents, and short product lives by utilizing high-end
+            automated manufacturing processes.
           </p>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-8 w-full">

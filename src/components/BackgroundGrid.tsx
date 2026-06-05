@@ -6,8 +6,8 @@ import { motion } from "framer-motion";
 export default function BackgroundGrid() {
   return (
     <div className="fixed inset-0 -z-50 overflow-hidden bg-dark-bg">
-      {/* Underlying dark base */}
-      <div className="absolute inset-0 bg-[#09090b]" />
+      {/* Underlying light base with rich warm red/rose undertone */}
+      <div className="absolute inset-0 bg-gradient-to-tr from-[#f8eeee] via-[#f5e3e3] to-[#faf7f7]" />
 
       {/* Grid Lines */}
       <div className="absolute inset-0 grid-bg-lines opacity-40" />
@@ -26,7 +26,7 @@ export default function BackgroundGrid() {
           repeat: Infinity,
           ease: "easeInOut",
         }}
-        className="absolute -top-[10%] -left-[10%] h-[500px] w-[500px] rounded-full bg-primary/10 blur-[120px]"
+        className="absolute -top-[10%] -left-[10%] h-[500px] w-[500px] rounded-full bg-primary/28 blur-[100px]"
       />
 
       <motion.div
@@ -39,7 +39,7 @@ export default function BackgroundGrid() {
           repeat: Infinity,
           ease: "easeInOut",
         }}
-        className="absolute top-[40%] right-[-5%] h-[600px] w-[600px] rounded-full bg-primary/8 blur-[150px]"
+        className="absolute top-[40%] right-[-5%] h-[600px] w-[600px] rounded-full bg-primary/26 blur-[140px]"
       />
 
       <motion.div
@@ -52,12 +52,12 @@ export default function BackgroundGrid() {
           repeat: Infinity,
           ease: "easeInOut",
         }}
-        className="absolute -bottom-[10%] left-[20%] h-[500px] w-[500px] rounded-full bg-primary/12 blur-[130px]"
+        className="absolute -bottom-[10%] left-[20%] h-[500px] w-[500px] rounded-full bg-primary/30 blur-[110px]"
       />
 
       {/* Diagonal scanline/shimmer effect */}
       <div 
-        className="absolute inset-0 pointer-events-none opacity-[0.015]"
+        className="absolute inset-0 pointer-events-none opacity-[0.06]"
         style={{
           background: "linear-gradient(45deg, rgba(210,35,42,0.8) 0%, transparent 100%)",
         }}

@@ -21,8 +21,8 @@ export default function ClipsTab({ onOpenQuote }: ClipsTabProps) {
       {/* Left Specs details */}
       <div className="lg:col-span-7 space-y-6">
         <div className="glassmorphism rounded-3xl p-8 border border-white/5">
-          <h3 className="text-2xl font-bold text-white tracking-tight">PE Plastic Cable Clips</h3>
-          <p className="text-zinc-400 text-sm leading-relaxed mt-4">
+          <h3 className="text-2xl font-bold text-zinc-950 tracking-tight">PE Plastic Cable Clips</h3>
+          <p className="text-zinc-650 text-sm leading-relaxed mt-4">
             ARCOS manufactures high-density polyethylene (PE) cable clips fitted with premium
             hardened, zinc-plated steel masonry nails. Designed specifically to hold flat or
             round electrical cords firmly in place against concrete, mortar, plaster, or wooden joists.
@@ -30,33 +30,33 @@ export default function ClipsTab({ onOpenQuote }: ClipsTabProps) {
 
           <div className="grid grid-cols-2 gap-6 mt-8">
             <div>
-              <h4 className="text-white text-sm font-semibold">Tough Plastic Body</h4>
-              <p className="text-zinc-500 text-xs mt-1">
+              <h4 className="text-zinc-900 text-sm font-semibold">Tough Plastic Body</h4>
+              <p className="text-zinc-550 text-xs mt-1">
                 High-impact PE resin resists crushing, UV decay, and cracking in winter environments.
               </p>
             </div>
             <div>
-              <h4 className="text-white text-sm font-semibold">High-grade Nails</h4>
-              <p className="text-zinc-500 text-xs mt-1">
+              <h4 className="text-zinc-900 text-sm font-semibold">High-grade Nails</h4>
+              <p className="text-zinc-555 text-xs mt-1">
                 Zinc-plated structural carbon steel nails prevent bending under heavy hammer force.
               </p>
             </div>
           </div>
 
           {/* Table of sizes */}
-          <div className="mt-8 border-t border-white/5 pt-6">
-            <h4 className="text-white text-sm font-semibold mb-4">Standard Diameter Offerings</h4>
+          <div className="mt-8 border-t border-zinc-200/60 pt-6">
+            <h4 className="text-zinc-900 text-sm font-semibold mb-4">Standard Diameter Offerings</h4>
             <div className="overflow-x-auto scrollbar-none">
               <table className="w-full min-w-[500px] text-left text-xs border-collapse">
                 <thead>
-                  <tr className="border-b border-white/10 text-zinc-500 whitespace-nowrap">
+                  <tr className="border-b border-zinc-200 text-zinc-500 whitespace-nowrap">
                     <th className="py-2 font-semibold pr-4">Size ID</th>
                     <th className="py-2 font-semibold pr-4">Supported Cable Diameters</th>
                     <th className="py-2 font-semibold pr-4">Form Factor</th>
                     <th className="py-2 font-semibold">Packaging Unit</th>
                   </tr>
                 </thead>
-                <tbody className="divide-y divide-white/5 text-zinc-300 whitespace-nowrap">
+                <tbody className="divide-y divide-zinc-200/60 text-zinc-800 whitespace-nowrap">
                   <tr>
                     <td className="py-2.5 font-mono">CC-4MM</td>
                     <td className="py-2.5">3.5mm - 4.5mm</td>
@@ -100,11 +100,11 @@ export default function ClipsTab({ onOpenQuote }: ClipsTabProps) {
           <div className="absolute top-[-30px] right-[-30px] h-32 w-32 bg-primary/10 rounded-full blur-2xl" />
           
           <div>
-            <h4 className="text-zinc-200 text-xs font-semibold uppercase tracking-wider">
+            <h4 className="text-zinc-500 text-xs font-semibold uppercase tracking-wider">
               Installation Assurance
             </h4>
-            <h3 className="text-xl font-bold text-white mt-2">Hammer-force Integrity</h3>
-            <p className="text-zinc-400 text-xs leading-relaxed mt-2">
+            <h3 className="text-xl font-bold text-zinc-950 mt-2">Hammer-force Integrity</h3>
+            <p className="text-zinc-600 text-xs leading-relaxed mt-2">
               Nails are set pre-aligned inside the PE collars to prevent sliding and ensure swift
               one-strike installation.
             </p>
@@ -135,8 +135,8 @@ export default function ClipsTab({ onOpenQuote }: ClipsTabProps) {
                    L 35 85
                    C 20 85, 20 100, 25 100
                    Z" 
-                fill="rgba(255,255,255,0.06)" 
-                stroke="rgba(255,255,255,0.15)"
+                fill="rgba(9,9,11,0.03)" 
+                stroke="rgba(9,9,11,0.15)"
                 strokeWidth="2" 
               />
               {/* Cable representation */}
@@ -152,7 +152,7 @@ export default function ClipsTab({ onOpenQuote }: ClipsTabProps) {
               capacitance: "N/A",
               type: "PE Molding"
             })}
-            className="w-full py-3 bg-white text-dark-bg text-xs font-extrabold rounded-xl hover:bg-zinc-100 transition-colors"
+            className="w-full py-3 bg-zinc-950 text-white text-xs font-extrabold rounded-xl hover:bg-zinc-800 transition-colors shadow-md"
           >
             Request Bulk Price Sheet
           </button>

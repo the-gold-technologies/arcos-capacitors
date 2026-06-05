@@ -38,7 +38,7 @@ export default function Navbar() {
         transition={{ duration: 0.5 }}
         className={`fixed top-0 left-0 right-0 z-40 transition-all duration-300 ${
           scrolled
-            ? "py-3 bg-dark-bg/85 backdrop-blur-md border-b border-dark-border shadow-[0_4px_30px_rgba(0,0,0,0.4)]"
+            ? "py-3 bg-white/85 backdrop-blur-md border-b border-zinc-200 shadow-sm"
             : "py-6 bg-transparent"
         }`}
       >
@@ -85,7 +85,7 @@ export default function Navbar() {
               </svg>
             </div>
             <div className="flex flex-col">
-              <span className="text-xl font-bold tracking-wider text-white font-sans m-0 leading-none">
+              <span className="text-xl font-bold tracking-wider text-zinc-900 font-sans m-0 leading-none">
                 ARCOS
               </span>
               <span className="text-[9px] uppercase tracking-[0.25em] text-primary font-semibold leading-none mt-1">
@@ -103,7 +103,7 @@ export default function Navbar() {
                   key={item.href}
                   href={item.href}
                   className={`relative px-4 py-2 text-sm font-medium transition-colors duration-300 rounded-full ${
-                    isActive ? "text-white" : "text-zinc-400 hover:text-white"
+                    isActive ? "text-zinc-900" : "text-zinc-500 hover:text-zinc-900"
                   }`}
                 >
                   {isActive && (
@@ -134,7 +134,7 @@ export default function Navbar() {
           {/* Mobile Menu Button */}
           <button
             onClick={() => setMobileMenuOpen(true)}
-            className="md:hidden p-2 text-zinc-400 hover:text-white transition-colors duration-200"
+            className="md:hidden p-2 text-zinc-500 hover:text-zinc-900 transition-colors duration-200"
             aria-label="Open menu"
           >
             <Menu className="h-6 w-6" />
@@ -161,7 +161,7 @@ export default function Navbar() {
               animate={{ x: 0 }}
               exit={{ x: "100%" }}
               transition={{ type: "spring", bounce: 0.1, duration: 0.4 }}
-              className="fixed top-0 right-0 bottom-0 z-50 w-4/5 max-w-sm bg-dark-bg/95 backdrop-blur-md border-l border-dark-border px-6 py-8 flex flex-col justify-between md:hidden"
+              className="fixed top-0 right-0 bottom-0 z-50 w-4/5 max-w-sm bg-white/95 backdrop-blur-md border-l border-zinc-200 px-6 py-8 flex flex-col justify-between md:hidden"
             >
               <div>
                 <div className="flex items-center justify-between mb-8">
@@ -203,7 +203,7 @@ export default function Navbar() {
                       </svg>
                     </div>
                     <div className="flex flex-col">
-                      <span className="text-lg font-bold tracking-wider text-white leading-none">
+                      <span className="text-lg font-bold tracking-wider text-zinc-900 leading-none">
                         ARCOS
                       </span>
                       <span className="text-[8px] uppercase tracking-[0.25em] text-primary font-semibold leading-none mt-0.5">
@@ -213,7 +213,7 @@ export default function Navbar() {
                   </Link>
                   <button
                     onClick={() => setMobileMenuOpen(false)}
-                    className="p-2 text-zinc-400 hover:text-white transition-colors duration-200"
+                    className="p-2 text-zinc-500 hover:text-zinc-900 transition-colors duration-200"
                     aria-label="Close menu"
                   >
                     <X className="h-6 w-6" />
@@ -235,8 +235,8 @@ export default function Navbar() {
                           onClick={() => setMobileMenuOpen(false)}
                           className={`block py-3 px-4 rounded-xl text-lg font-medium transition-all ${
                             isActive
-                              ? "bg-primary/20 text-white border-l-4 border-primary pl-3"
-                              : "text-zinc-400 hover:text-white hover:bg-white/5"
+                              ? "bg-primary/10 text-primary border-l-4 border-primary pl-3"
+                              : "text-zinc-500 hover:text-zinc-900 hover:bg-zinc-50"
                           }`}
                         >
                           {item.name}
