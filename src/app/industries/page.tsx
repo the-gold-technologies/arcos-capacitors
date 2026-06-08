@@ -73,7 +73,7 @@ const industries = [
   {
     name: "Panel Builders",
     desc: "High-kVAR rated power factor correction capacitors engineered to optimize utility lines and prevent panel heat loss.",
-    image: "https://images.unsplash.com/photo-1601524909162-be87252be298?w=500&auto=format&fit=crop&q=80",
+    image: "https://images.unsplash.com/photo-1621905251189-08b45d6a269e?w=500&auto=format&fit=crop&q=80",
     icon: Layers,
   },
   {
@@ -202,10 +202,10 @@ export default function IndustriesServed() {
             OEM Inquiry Form
           </a>
           <a
-            href="/contact"
+            href="tel:+919891758499"
             className="py-3 px-6 bg-zinc-100 hover:bg-zinc-200 border border-zinc-200 text-zinc-800 text-xs font-bold rounded-xl transition-all duration-300"
           >
-            Consult नोएडा Plant
+            Consult Noida Plant
           </a>
         </div>
       </section>

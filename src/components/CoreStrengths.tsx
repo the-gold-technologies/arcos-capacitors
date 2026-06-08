@@ -35,11 +35,12 @@ const containerVariants = {
 };
 
 const cardVariants = {
-  hidden: { opacity: 0, y: 25 },
+  hidden: { opacity: 0, y: 30, scale: 0.95 },
   visible: { 
     opacity: 1, 
     y: 0,
-    transition: { type: "spring", stiffness: 80, damping: 15 }
+    scale: 1,
+    transition: { type: "spring", stiffness: 90, damping: 14 }
   }
 } as const;
 
@@ -73,18 +74,28 @@ export default function CoreStrengths() {
               key={idx}
               variants={cardVariants}
               whileHover={{ 
-                y: -5, 
-                borderColor: "rgba(210,35,42,0.25)",
-                boxShadow: "0 10px 30px -10px rgba(210,35,42,0.12)"
+                y: -8, 
+                scale: 1.02,
+                borderColor: "rgba(210,35,42,0.3)",
+                boxShadow: "0 20px 40px -15px rgba(210,35,42,0.12)"
               }}
-              className="bg-white border border-zinc-200 rounded-2xl p-6 flex flex-col items-start gap-4 transition-all duration-300 shadow-sm group"
+              className="bg-white border border-zinc-200 rounded-2xl p-6 flex flex-col items-start gap-4 transition-all duration-300 shadow-sm group relative overflow-hidden cursor-pointer"
             >
-              <div className="h-10 w-10 rounded-xl bg-primary/10 group-hover:bg-primary/20 flex items-center justify-center border border-primary/20 text-primary transition-colors duration-300">
-                <Icon className="h-5 w-5" />
+              {/* Light Sweep Reflection Effect */}
+              <div className="absolute inset-0 w-1/2 h-full bg-gradient-to-r from-transparent via-primary/5 to-transparent -translate-x-full group-hover:translate-x-[200%] transition-transform duration-1000 ease-out z-0 pointer-events-none" />
+
+              <div className="h-10 w-10 rounded-xl bg-primary/10 group-hover:bg-primary/20 flex items-center justify-center border border-primary/20 text-primary transition-colors duration-300 z-10">
+                <motion.div
+                  className="flex items-center justify-center"
+                  whileHover={{ rotate: 360, scale: 1.15 }}
+                  transition={{ type: "spring", stiffness: 120, damping: 10 }}
+                >
+                  <Icon className="h-5 w-5" />
+                </motion.div>
               </div>
-              <div>
-                <h3 className="text-zinc-900 font-bold text-base tracking-tight">{str.title}</h3>
-                <p className="text-zinc-600 text-xs sm:text-sm leading-relaxed mt-2">{str.desc}</p>
+              <div className="z-10">
+                <h3 className="text-zinc-900 font-bold text-base tracking-tight transition-colors duration-300 group-hover:text-primary">{str.title}</h3>
+                <p className="text-zinc-650 text-xs sm:text-sm leading-relaxed mt-2">{str.desc}</p>
               </div>
             </motion.div>
           );

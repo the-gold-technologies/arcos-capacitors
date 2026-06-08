@@ -9,7 +9,7 @@ export default function About() {
   return (
     <div className="max-w-7xl mx-auto px-6 py-12">
       {/* 1. Header Section */}
-      <section className="text-center max-w-3xl mx-auto mb-20">
+      <section className="text-center max-w-3xl mx-auto mb-12">
         <motion.span
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
@@ -37,6 +37,35 @@ export default function About() {
         </motion.p>
       </section>
 
+      {/* Brand/Factory Banner Image */}
+      <motion.div
+        initial={{ opacity: 0, y: 25 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1], delay: 0.2 }}
+        className="relative h-[250px] sm:h-[420px] rounded-[30px] overflow-hidden mb-16 border border-zinc-200/50 shadow-2xl group"
+      >
+        <img
+          src="/arcos_factory_floor.png"
+          alt="ARCOS Noida Factory Floor"
+          className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-[1.02]"
+        />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/25 to-transparent pointer-events-none" />
+        <div className="absolute bottom-6 left-6 sm:bottom-10 sm:left-10 text-white z-10 space-y-3 text-left">
+          <span className="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider bg-white/10 backdrop-blur-md px-3.5 py-1.5 rounded-full border border-white/20">
+            <span className="h-1.5 w-1.5 rounded-full bg-primary animate-pulse" />
+            Our Noida Plant
+          </span>
+          <h2 className="text-2xl sm:text-4xl font-extrabold tracking-tight text-white">
+            20,000 Sq. Ft. Manufacturing Facility
+          </h2>
+          <p className="text-zinc-300 text-xs sm:text-sm max-w-lg leading-relaxed hidden sm:block">
+            Our Noida industrial facility is equipped with automated high-speed
+            winders, vacuum drying chambers, and rigorous clean-room test
+            equipment to produce 25,000 components daily.
+          </p>
+        </div>
+      </motion.div>
+
       {/* 2. History & Philosophy (Asymmetric Overlapping Layout) */}
       <section className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center mb-24">
         {/* Left Text */}
@@ -46,18 +75,19 @@ export default function About() {
           </h2>
           <p className="text-zinc-700 text-sm sm:text-base leading-relaxed">
             Since its establishment in 2015, ARCOS has focused on delivering
-            reliable and affordable capacitor solutions without compromising quality.
-            Our manufacturing philosophy combines precision engineering, advanced
-            manufacturing technologies, premium-quality raw materials, and rigorous
-            testing procedures to ensure every product meets customer expectations.
+            reliable and affordable capacitor solutions without compromising
+            quality. Our manufacturing philosophy combines precision
+            engineering, advanced manufacturing technologies, premium-quality
+            raw materials, and rigorous testing procedures to ensure every
+            product meets customer expectations.
           </p>
           <p className="text-zinc-600 text-sm sm:text-base leading-relaxed">
-            We understand the challenges faced by OEM manufacturers and industrial
-            buyers, including capacitor failures, inconsistent performance, voltage
-            fluctuation issues, short product life, and unreliable suppliers. Our
-            products are designed to solve these challenges through dependable
-            performance, consistent capacitance values, long operational life,
-            and superior manufacturing quality.
+            We understand the challenges faced by OEM manufacturers and
+            industrial buyers, including capacitor failures, inconsistent
+            performance, voltage fluctuation issues, short product life, and
+            unreliable suppliers. Our products are designed to solve these
+            challenges through dependable performance, consistent capacitance
+            values, long operational life, and superior manufacturing quality.
           </p>
         </div>
 

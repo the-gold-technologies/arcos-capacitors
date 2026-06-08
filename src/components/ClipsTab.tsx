@@ -13,27 +13,45 @@ const clipsSubProducts = [
   {
     id: "round-clips",
     name: "Round Cable Clips",
-    description: "Designed for routing round electrical cords, coaxial cables, and telephone wires securely against masonry or wood.",
-    image: "https://images.unsplash.com/photo-1601524909162-be87252be298?w=600&auto=format&fit=crop&q=80",
+    description:
+      "Designed for routing round electrical cords, coaxial cables, and telephone wires securely against masonry or wood.",
+    image:
+      "https://images.unsplash.com/photo-1498084393753-b411b2d26b34?w=600&auto=format&fit=crop&q=80",
     specs: "Sizes: 4mm - 12mm | Round Profile",
-    features: ["Pre-inserted steel nail", "Impact-resistant PE", "UV-stabilized body"]
+    features: [
+      "Pre-inserted steel nail",
+      "Impact-resistant PE",
+      "UV-stabilized body",
+    ],
   },
   {
     id: "flat-clips",
     name: "Flat Cable Clips",
-    description: "Perfect flat fit for twin-and-earth cables, flat network cords, and custom electronic wiring paths.",
-    image: "https://images.unsplash.com/photo-1558346490-a72e53ae2d4f?w=600&auto=format&fit=crop&q=80",
+    description:
+      "Perfect flat fit for twin-and-earth cables, flat network cords, and custom electronic wiring paths.",
+    image:
+      "https://images.unsplash.com/photo-1558346490-a72e53ae2d4f?w=600&auto=format&fit=crop&q=80",
     specs: "Sizes: 4mm - 10mm | Flat Profile",
-    features: ["Snug flat-hug structure", "Crack-free PE formulation", "Corrosion-resistant nail"]
+    features: [
+      "Snug flat-hug structure",
+      "Crack-free PE formulation",
+      "Corrosion-resistant nail",
+    ],
   },
   {
     id: "hardened-nails",
     name: "Hardened Masonry Nails",
-    description: "Fitted with structural carbon steel nails zinc-plated to resist rust and withstand heavy hammer impact.",
-    image: "https://images.unsplash.com/photo-1590233639477-c46678b87252?w=600&auto=format&fit=crop&q=80",
+    description:
+      "Fitted with structural carbon steel nails zinc-plated to resist rust and withstand heavy hammer impact.",
+    image:
+      "https://images.unsplash.com/photo-1504148455328-c376907d081c?w=600&auto=format&fit=crop&q=80",
     specs: "Material: C45 Carbon Steel",
-    features: ["Extra-hardened heat treatment", "Zinc rust protection", "Pre-set nail depth alignment"]
-  }
+    features: [
+      "Extra-hardened heat treatment",
+      "Zinc rust protection",
+      "Pre-set nail depth alignment",
+    ],
+  },
 ];
 
 export default function ClipsTab({ onOpenQuote }: ClipsTabProps) {
@@ -46,71 +64,78 @@ export default function ClipsTab({ onOpenQuote }: ClipsTabProps) {
         animate={{ opacity: 1, y: 0 }}
         exit={{ opacity: 0, y: -15 }}
         transition={{ duration: 0.3 }}
-        className="flex flex-col gap-6"
+        className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6"
       >
         {clipsSubProducts.map((prod) => (
           <motion.div
             key={prod.id}
-            whileHover={{ borderColor: "rgba(210,35,42,0.3)" }}
-            className="bg-white border border-zinc-200 rounded-[24px] p-6 flex flex-col md:flex-row gap-6 hover:shadow-md transition-all duration-300 relative group"
+            whileHover={{ 
+              y: -5,
+              borderColor: "rgba(210,35,42,0.25)",
+              boxShadow: "0 12px 30px -10px rgba(0,0,0,0.08)" 
+            }}
+            className="bg-white border border-zinc-200 rounded-[32px] p-4 flex flex-col justify-between hover:border-zinc-300 transition-all duration-300 relative group shadow-sm h-full"
           >
-            {/* Left Column: Image wrapper */}
-            <div className="w-full md:w-[220px] h-[150px] rounded-[18px] overflow-hidden shrink-0 bg-zinc-50 relative border border-zinc-200 shadow-inner">
+            {/* Top Image Banner */}
+            <div className="relative w-full h-[200px] rounded-[24px] overflow-hidden bg-zinc-50 border border-zinc-100 shadow-sm shrink-0">
               <img
                 src={prod.image}
                 alt={prod.name}
                 className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent opacity-85" />
-              <span className="absolute bottom-3 left-3 text-[9px] font-bold text-white uppercase bg-zinc-950/80 px-2 py-0.5 rounded border border-white/10 backdrop-blur-sm">
-                {prod.specs}
+              <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent pointer-events-none" />
+              <span className="absolute bottom-3 left-3 text-[9px] font-bold text-white uppercase bg-zinc-950/80 px-2.5 py-1 rounded-md border border-white/10 backdrop-blur-sm tracking-wider">
+                {prod.id === "hardened-nails" ? "C45 Carbon Steel" : "PE Molding"}
               </span>
             </div>
 
-            {/* Right Column: Content */}
-            <div className="flex-1 flex flex-col justify-between">
+            {/* Middle Details Box */}
+            <div className="pt-4 px-1 flex-1 flex flex-col justify-between">
               <div>
-                <div className="flex items-center justify-between">
-                  <h3 className="text-lg font-bold text-zinc-950 tracking-tight group-hover:text-primary transition-colors duration-300 flex items-center gap-1.5">
-                    <Layers className="h-4.5 w-4.5 text-primary" /> {prod.name}
+                <div className="flex items-center gap-1.5 flex-wrap">
+                  <h3 className="text-base font-bold text-zinc-950 tracking-tight group-hover:text-primary transition-colors duration-300 flex items-center gap-1.5">
+                    <Layers className="h-4 w-4 text-primary shrink-0" /> {prod.name}
                   </h3>
+                  <span className="inline-flex items-center justify-center h-4.5 w-4.5 rounded-full bg-emerald-500 text-white shrink-0 shadow-sm shadow-emerald-500/10">
+                    <Check className="h-3 w-3 stroke-[3.5]" />
+                  </span>
                 </div>
+                
+                <p className="text-zinc-500 text-xs leading-relaxed line-clamp-2 mt-2">
+                  {prod.description}
+                </p>
 
-                <div className="grid grid-cols-1 md:grid-cols-12 gap-4 mt-3">
-                  {/* Description & Features */}
-                  <div className="md:col-span-8 space-y-2">
-                    <p className="text-zinc-600 text-xs leading-relaxed">
-                      {prod.description}
-                    </p>
-                    <ul className="flex flex-wrap gap-x-4 gap-y-1.5 pt-1">
-                      {prod.features.map((feat, idx) => (
-                        <li key={idx} className="flex items-center gap-1.5 text-[10px] text-zinc-500">
-                          <Check className="h-3.5 w-3.5 text-primary shrink-0" />
-                          <span>{feat}</span>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-
-                  {/* Spec box */}
-                  <div className="md:col-span-4 bg-zinc-50/85 border border-zinc-200 rounded-xl p-3 flex flex-col justify-center text-center">
-                    <span className="text-zinc-400 font-bold uppercase tracking-wider text-[9px]">Sizing & Profile</span>
-                    <span className="text-zinc-800 font-bold font-mono mt-1 text-xs block">{prod.specs}</span>
-                  </div>
+                <div className="mt-3 pt-3 border-t border-zinc-100/60">
+                  <ul className="space-y-1">
+                    {prod.features.slice(0, 2).map((feat, idx) => (
+                      <li key={idx} className="flex items-center gap-1.5 text-[10px] text-zinc-500 font-medium">
+                        <div className="h-1 w-1 rounded-full bg-primary shrink-0" />
+                        <span className="line-clamp-1">{feat}</span>
+                      </li>
+                    ))}
+                  </ul>
                 </div>
               </div>
 
-              {/* Bottom buttons row */}
-              <div className="mt-4 pt-4 border-t border-zinc-100 flex justify-end">
+              {/* Bottom Specs & Action Box */}
+              <div className="mt-5 pt-3 border-t border-zinc-100 flex items-center justify-between gap-2">
+                <div className="flex items-center gap-1.5 text-[10px] font-semibold text-zinc-500">
+                  <span className="bg-zinc-50 border border-zinc-200 px-2 py-0.5 rounded font-mono text-zinc-700">
+                    {prod.specs.split("|")[0].trim().replace("Sizes: ", "")}
+                  </span>
+                </div>
+
                 <button
-                  onClick={() => onOpenQuote({
-                    id: prod.id,
-                    name: prod.name,
-                    type: "PE Cable Clips"
-                  })}
-                  className="px-6 py-2 bg-zinc-50 hover:bg-primary border border-zinc-200 hover:border-primary text-zinc-800 hover:text-white text-xs font-bold rounded-xl transition-all duration-300 shadow-sm"
+                  onClick={() =>
+                    onOpenQuote({
+                      id: prod.id,
+                      name: prod.name,
+                      type: "PE Cable Clips",
+                    })
+                  }
+                  className="px-4.5 py-2 bg-zinc-100 hover:bg-primary border border-zinc-200/60 hover:border-primary text-zinc-800 hover:text-white text-xs font-bold rounded-full transition-all duration-300 flex items-center gap-0.5 cursor-pointer shadow-sm"
                 >
-                  Request Price Sheet
+                  Quote +
                 </button>
               </div>
             </div>
@@ -130,19 +155,34 @@ export default function ClipsTab({ onOpenQuote }: ClipsTabProps) {
         {/* Left Specs details */}
         <div className="lg:col-span-7 space-y-6">
           <div className="glassmorphism rounded-3xl p-8 border border-white/5">
-            <h3 className="text-2xl font-bold text-zinc-950 tracking-tight">PE Plastic Cable Clips</h3>
+            <h3 className="text-2xl font-bold text-zinc-950 tracking-tight">
+              PE Plastic Cable Clips
+            </h3>
             <p className="text-zinc-600 text-sm leading-relaxed mt-4">
-              ARCOS manufactures high-density polyethylene (PE) cable clips fitted with premium
-              hardened, zinc-plated steel masonry nails. Designed specifically to hold flat or
-              round electrical cords firmly in place against concrete, mortar, plaster, or wooden joists.
+              ARCOS manufactures high-density polyethylene (PE) cable clips
+              fitted with premium hardened, zinc-plated steel masonry nails.
+              Designed specifically to hold flat or round electrical cords
+              firmly in place against concrete, mortar, plaster, or wooden
+              joists.
             </p>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mt-8">
               <div>
-                <h4 className="text-zinc-900 text-xs font-bold uppercase tracking-wider">Applications</h4>
+                <h4 className="text-zinc-900 text-xs font-bold uppercase tracking-wider">
+                  Applications
+                </h4>
                 <ul className="mt-2.5 space-y-2">
-                  {["Residential Wiring", "Commercial Installations", "Electrical Equipment", "Infrastructure Projects", "Industrial Installations"].map((app, idx) => (
-                    <li key={idx} className="flex items-center gap-2 text-zinc-600 text-xs">
+                  {[
+                    "Residential Wiring",
+                    "Commercial Installations",
+                    "Electrical Equipment",
+                    "Infrastructure Projects",
+                    "Industrial Installations",
+                  ].map((app, idx) => (
+                    <li
+                      key={idx}
+                      className="flex items-center gap-2 text-zinc-600 text-xs"
+                    >
                       <span className="h-1.5 w-1.5 rounded-full bg-primary shrink-0" />
                       <span>{app}</span>
                     </li>
@@ -150,10 +190,21 @@ export default function ClipsTab({ onOpenQuote }: ClipsTabProps) {
                 </ul>
               </div>
               <div>
-                <h4 className="text-zinc-900 text-xs font-bold uppercase tracking-wider">Benefits</h4>
+                <h4 className="text-zinc-900 text-xs font-bold uppercase tracking-wider">
+                  Benefits
+                </h4>
                 <ul className="mt-2.5 space-y-2">
-                  {["Secure Cable Management", "Easy Installation", "Organized Wiring Systems", "Reliable Holding Strength", "Long-Term Performance"].map((ben, idx) => (
-                    <li key={idx} className="flex items-center gap-2 text-zinc-600 text-xs">
+                  {[
+                    "Secure Cable Management",
+                    "Easy Installation",
+                    "Organized Wiring Systems",
+                    "Reliable Holding Strength",
+                    "Long-Term Performance",
+                  ].map((ben, idx) => (
+                    <li
+                      key={idx}
+                      className="flex items-center gap-2 text-zinc-600 text-xs"
+                    >
                       <span className="h-1.5 w-1.5 rounded-full bg-primary/70 shrink-0" />
                       <span>{ben}</span>
                     </li>
@@ -164,13 +215,17 @@ export default function ClipsTab({ onOpenQuote }: ClipsTabProps) {
 
             {/* Table of sizes */}
             <div className="mt-8 border-t border-zinc-200/60 pt-6">
-              <h4 className="text-zinc-900 text-sm font-semibold mb-4">Standard Diameter Offerings</h4>
+              <h4 className="text-zinc-900 text-sm font-semibold mb-4">
+                Standard Diameter Offerings
+              </h4>
               <div className="overflow-x-auto scrollbar-none">
                 <table className="w-full min-w-[500px] text-left text-xs border-collapse">
                   <thead>
                     <tr className="border-b border-zinc-200 text-zinc-500 whitespace-nowrap">
                       <th className="py-2 font-semibold pr-4">Size ID</th>
-                      <th className="py-2 font-semibold pr-4">Supported Cable Diameters</th>
+                      <th className="py-2 font-semibold pr-4">
+                        Supported Cable Diameters
+                      </th>
                       <th className="py-2 font-semibold pr-4">Form Factor</th>
                       <th className="py-2 font-semibold">Packaging Unit</th>
                     </tr>
@@ -217,18 +272,20 @@ export default function ClipsTab({ onOpenQuote }: ClipsTabProps) {
         <div className="lg:col-span-5 relative">
           <div className="glassmorphism rounded-3xl p-8 border border-white/5 relative overflow-hidden flex flex-col justify-between min-h-[350px]">
             <div className="absolute top-[-30px] right-[-30px] h-32 w-32 bg-primary/10 rounded-full blur-2xl" />
-            
+
             <div>
               <h4 className="text-zinc-500 text-xs font-semibold uppercase tracking-wider">
                 Installation Assurance
               </h4>
-              <h3 className="text-xl font-bold text-zinc-950 mt-2">Hammer-force Integrity</h3>
+              <h3 className="text-xl font-bold text-zinc-950 mt-2">
+                Hammer-force Integrity
+              </h3>
               <p className="text-zinc-600 text-xs leading-relaxed mt-2">
-                Nails are set pre-aligned inside the PE collars to prevent sliding and ensure swift
-                one-strike installation.
+                Nails are set pre-aligned inside the PE collars to prevent
+                sliding and ensure swift one-strike installation.
               </p>
             </div>
-            
+
             {/* SVG Visual representation of Clip */}
             <div className="my-8 flex justify-center">
               <svg viewBox="0 0 160 120" className="w-[140px] h-[105px]">
@@ -240,11 +297,18 @@ export default function ClipsTab({ onOpenQuote }: ClipsTabProps) {
                   </linearGradient>
                 </defs>
                 {/* The nail */}
-                <rect x="75" y="5" width="10" height="70" fill="url(#nailGrad)" rx="1" />
+                <rect
+                  x="75"
+                  y="5"
+                  width="10"
+                  height="70"
+                  fill="url(#nailGrad)"
+                  rx="1"
+                />
                 <ellipse cx="80" cy="5" rx="7" ry="2" fill="#aaa" />
-                
+
                 {/* The PE collar clip */}
-                <path 
+                <path
                   d="M 40 100 
                      A 40 40 0 0 1 120 100 
                      L 135 100
@@ -253,24 +317,43 @@ export default function ClipsTab({ onOpenQuote }: ClipsTabProps) {
                      A 25 25 0 0 0 45 85
                      L 35 85
                      C 20 85, 20 100, 25 100
-                     Z" 
-                  fill="rgba(9,9,11,0.03)" 
+                     Z"
+                  fill="rgba(9,9,11,0.03)"
                   stroke="rgba(9,9,11,0.15)"
-                  strokeWidth="2" 
+                  strokeWidth="2"
                 />
                 {/* Cable representation */}
-                <circle cx="80" cy="95" r="23" fill="rgba(210,35,42,0.1)" stroke="#d2232a" strokeWidth="1.5" strokeDasharray="3 3" />
-                <text x="80" y="99" fill="#d2232a" fontSize="10" fontWeight="bold" textAnchor="middle">CABLE</text>
+                <circle
+                  cx="80"
+                  cy="95"
+                  r="23"
+                  fill="rgba(210,35,42,0.1)"
+                  stroke="#d2232a"
+                  strokeWidth="1.5"
+                  strokeDasharray="3 3"
+                />
+                <text
+                  x="80"
+                  y="99"
+                  fill="#d2232a"
+                  fontSize="10"
+                  fontWeight="bold"
+                  textAnchor="middle"
+                >
+                  CABLE
+                </text>
               </svg>
             </div>
 
             <button
-              onClick={() => onOpenQuote({
-                id: "clips",
-                name: "Cable Clips Selection",
-                capacitance: "N/A",
-                type: "PE Molding"
-              })}
+              onClick={() =>
+                onOpenQuote({
+                  id: "clips",
+                  name: "Cable Clips Selection",
+                  capacitance: "N/A",
+                  type: "PE Molding",
+                })
+              }
               className="w-full py-3 bg-zinc-950 text-white text-xs font-extrabold rounded-xl hover:bg-zinc-800 transition-colors shadow-md"
             >
               Request Bulk Price Sheet

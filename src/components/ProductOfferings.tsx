@@ -28,7 +28,7 @@ export default function ProductOfferings() {
         </div>
 
         {/* Asymmetric Product Grid - escaping boxes */}
-        <div className="grid grid-cols-1 md:grid-cols-12 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-12 gap-6">
           
           {/* Card 1: Capacitors (Occupies 7 cols on medium/large) */}
           <motion.div 

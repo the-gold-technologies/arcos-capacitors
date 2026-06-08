@@ -127,7 +127,7 @@ const capacitorsData: Record<string, CapacitorDetails> = {
     ],
     applications: "APFC Panels, Power Distribution Systems, Industrial Plants, Commercial Buildings.",
     type: "Box/Square Body or Heavy Cylinder",
-    image: "https://images.unsplash.com/photo-1601524909162-be87252be298?w=800&auto=format&fit=crop&q=80",
+    image: "https://images.unsplash.com/photo-1621905251189-08b45d6a269e?w=800&auto=format&fit=crop&q=80",
     description: "ARCOS Power Factor Correction Capacitors help reduce reactive power demand in industrial panels, optimizing utility billing and preventing line overheads."
   },
   square: {

@@ -124,8 +124,9 @@ export default function Infrastructure() {
               Core Production Line Equipment
             </h2>
             <p className="text-zinc-600 text-xs sm:text-sm mt-3">
-              Our Noida facility features 14 specialized categories of electrical
-              winding, spraying, welding, testing, and packaging systems.
+              Our Noida facility features 14 specialized categories of
+              electrical winding, spraying, welding, testing, and packaging
+              systems.
             </p>
           </div>
 
@@ -173,12 +174,12 @@ export default function Infrastructure() {
                 Rigorous Inspection & Verification
               </h2>
               <p className="text-zinc-650 text-sm sm:text-base leading-relaxed">
-                Quality is at the core of our brand. Every single capacitor passes
-                through multiple rigorous automated inspection stages before
-                packaging. We test for capacitance values (to ensure strict
-                tolerance limits), dissipation factors, high-voltage insulation
-                leakages, and mechanical seal integrity under severe thermal
-                loads.
+                Quality is at the core of our brand. Every single capacitor
+                passes through multiple rigorous automated inspection stages
+                before packaging. We test for capacitance values (to ensure
+                strict tolerance limits), dissipation factors, high-voltage
+                insulation leakages, and mechanical seal integrity under severe
+                thermal loads.
               </p>
             </div>
             <div className="lg:col-span-4 bg-zinc-50 border border-zinc-200 p-6 rounded-2xl space-y-4 shadow-inner">

@@ -114,20 +114,20 @@ export default function Footer() {
             </h4>
             <ul className="flex flex-col gap-3">
               {[
-                "Fan Capacitors",
-                "Motor Run Capacitors",
-                "Washing Machine Capacitors",
-                "Air Conditioner Capacitors",
-                "Submersible Pump Capacitors",
-                "Power Factor Correction",
-                "Cable Clips & Ties",
+                { name: "Fan Capacitors", href: "/products/capacitors/fan" },
+                { name: "Motor Run Capacitors", href: "/products/capacitors/motor" },
+                { name: "Washing Machine Capacitors", href: "/products/capacitors/washing" },
+                { name: "Air Conditioner Capacitors", href: "/products/capacitors/ac" },
+                { name: "Submersible Pump Capacitors", href: "/products/capacitors/submersible" },
+                { name: "Power Factor Correction", href: "/products/capacitors/pfc" },
+                { name: "Cable Clips & Ties", href: "/products?tab=clips" },
               ].map((prod) => (
-                <li key={prod}>
+                <li key={prod.name}>
                   <Link
-                    href="/products"
+                    href={prod.href}
                     className="text-zinc-400 hover:text-white text-sm hover:translate-x-1.5 inline-block transition-all duration-300"
                   >
-                    {prod}
+                    {prod.name}
                   </Link>
                 </li>
               ))}
