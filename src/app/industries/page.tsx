@@ -20,88 +20,77 @@ const industries = [
     name: "Fan Manufacturers",
     tags: ["Ceiling Fans", "Exhaust Fans", "Industrial Blowers"],
     desc: "Supplying premium microfarad fan capacitors directly to leading ceiling fan, exhaust fan, and industrial blower brands in India.",
-    image:
-      "https://images.unsplash.com/photo-1618220179428-22790b461013?w=500&auto=format&fit=crop&q=80",
+    image: "/fan_manufacturing.png",
     icon: Wind,
   },
   {
     name: "Motor Manufacturers",
     tags: ["Cylindrical Run", "Continuous Duty", "High Torque"],
     desc: "Custom cylindrical run capacitors optimized for continuous high torque performance in single-phase electrical motors.",
-    image:
-      "https://images.unsplash.com/photo-1581092160607-ee22621dd758?w=500&auto=format&fit=crop&q=80",
+    image: "/motor_manufacturing.png",
     icon: Settings,
   },
   {
     name: "Pump Manufacturers",
     tags: ["Submersible", "Borehole Pumps", "Resin Potting"],
     desc: "Heavy-duty resin submersible pump capacitors designed to operate reliably under borehole voltage load shifts.",
-    image:
-      "https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=500&auto=format&fit=crop&q=80",
+    image: "/pump_manufacturing.png",
     icon: Wrench,
   },
   {
     name: "Appliance Manufacturers",
     tags: ["Washing Machines", "Dryers", "Potting Caps"],
     desc: "Supplying dual-capacitance washing machine and dryer potting capacitors for leading consumer home appliance brands.",
-    image:
-      "https://images.unsplash.com/photo-1527515637462-cff94eecc1ac?w=500&auto=format&fit=crop&q=80",
+    image: "/appliance_manufacturing.png",
     icon: Tv,
   },
   {
     name: "Electrical Product Manufacturers",
     tags: ["Lighting Ballasts", "Power Factor", "PFC Caps"],
     desc: "Providing high-durability capacitors engineered for lighting systems, ballast controls, and power factor setups.",
-    image:
-      "https://images.unsplash.com/photo-1555664424-778a1e5e1b48?w=500&auto=format&fit=crop&q=80",
+    image: "/electrical_manufacturing.png",
     icon: Cpu,
   },
   {
     name: "Electrical Dealers & Distributors",
     tags: ["Wholesale Packs", "Nylon Ties", "Cable Clips"],
     desc: "Supplying ISO-certified box-pack capacitors, cable ties, and clips to wholesale distributors across retail networks.",
-    image:
-      "https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?w=500&auto=format&fit=crop&q=80",
+    image: "/electrical_distribution.png",
     icon: Users,
   },
   {
     name: "Industrial Automation Companies",
     tags: ["APFC Panels", "Square Body", "High Stability"],
     desc: "Compact square body capacitors and APFC panel power correction systems for high-stability manufacturing automation.",
-    image:
-      "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=500&auto=format&fit=crop&q=80",
+    image: "/industrial_automation.png",
     icon: Factory,
   },
   {
     name: "Renewable Energy Companies",
     tags: ["Solar Farms", "Inverter Panels", "UV-Black Ties"],
     desc: "UV-stabilized black cable ties and specialized capacitors utilized in solar farm inverter panel wiring grids.",
-    image:
-      "https://images.unsplash.com/photo-1509391366360-2e959784a276?w=500&auto=format&fit=crop&q=80",
+    image: "/solar_energy.png",
     icon: Sun,
   },
   {
     name: "Infrastructure Projects",
     tags: ["Cable Management", "Structural Wiring", "Heavy Duty"],
     desc: "Heavy-duty cable ties and clips engineered for structural cable management and industrial wiring installations.",
-    image:
-      "https://images.unsplash.com/photo-1584824486509-112e4181ff6b?w=500&auto=format&fit=crop&q=80",
+    image: "/infrastructure_wiring.png",
     icon: Building2,
   },
   {
     name: "Panel Builders",
     tags: ["kVAR-Rated", "Heat Reduction", "Capacitor Banks"],
     desc: "High-kVAR rated power factor correction capacitors engineered to optimize utility lines and prevent panel heat loss.",
-    image:
-      "https://images.unsplash.com/photo-1621905251189-08b45d6a269e?w=500&auto=format&fit=crop&q=80",
+    image: "/panel_building.png",
     icon: Layers,
   },
   {
     name: "OEM Manufacturers",
     tags: ["Custom Leads", "Private Labeling", "Specific Values"],
     desc: "Partnering with brand buyers to design and manufacture capacitors with custom capacitance values, lead wires, and markings.",
-    image:
-      "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=500&auto=format&fit=crop&q=80",
+    image: "/oem_manufacturing.png",
     icon: Briefcase,
   },
 ];

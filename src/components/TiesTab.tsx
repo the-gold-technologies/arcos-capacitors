@@ -16,7 +16,7 @@ const tiesSubProducts = [
     description:
       "Specially formulated with carbon black additives for high UV stabilization, making them ideal for long-term outdoor solar panels and cable tray assemblies.",
     image:
-      "https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?w=600&auto=format&fit=crop&q=80",
+      "/cable_ties_black.png",
     specs: "Outdoor Rated | Carbon Black",
     features: [
       "Resists sun decay",
@@ -30,7 +30,7 @@ const tiesSubProducts = [
     description:
       "Constructed from pure virgin Nylon 66, offering clean aesthetics for indoor electrical panel boards, home wiring, and wire harness bundling.",
     image:
-      "https://images.unsplash.com/photo-1558346490-a72e53ae2d4f?w=600&auto=format&fit=crop&q=80",
+      "/cable_ties_natural.png",
     specs: "Indoor Rated | Natural Nylon",
     features: [
       "High transparency grade",
@@ -44,7 +44,7 @@ const tiesSubProducts = [
     description:
       "Thicker and wider ties designed for large structural bundles, industrial machinery piping, and heavy electrical infrastructure installation.",
     image:
-      "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=600&auto=format&fit=crop&q=80",
+      "/cable_ties_heavy.png",
     specs: "Tensile Strength: up to 75 kg",
     features: [
       "Extra-wide strap body",

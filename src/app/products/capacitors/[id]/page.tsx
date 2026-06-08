@@ -42,7 +42,7 @@ const capacitorsData: Record<string, CapacitorDetails> = {
     ],
     applications: "Ceiling Fans, Exhaust Fans, Ventilation Systems, Industrial Fans and OEM Fan Manufacturing.",
     type: "Cylindrical / Wire Lead",
-    image: "https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?w=800&auto=format&fit=crop&q=80",
+    image: "/fan_manufacturing.png",
     description: "ARCOS manufactures premium-quality fan capacitors designed to deliver stable performance, energy efficiency, and long operating life under voltage variations."
   },
   motor: {
@@ -59,7 +59,7 @@ const capacitorsData: Record<string, CapacitorDetails> = {
     ],
     applications: "Electric Motors, Compressors, Blowers, Air Conditioning Equipment.",
     type: "Cylindrical Dual-terminal",
-    image: "https://images.unsplash.com/photo-1581092160607-ee22621dd758?w=800&auto=format&fit=crop&q=80",
+    image: "/motor_manufacturing.png",
     description: "ARCOS Motor Run Capacitors are designed for continuous duty in electrical motors, air compressors, and blowers, offering high reliability and electrical safety."
   },
   washing: {
@@ -76,7 +76,7 @@ const capacitorsData: Record<string, CapacitorDetails> = {
     ],
     applications: "Washing Machines, Spin Dryers, and Household Appliance Equipment.",
     type: "Cylindrical Plastic Can",
-    image: "https://images.unsplash.com/photo-1527515637462-cff94eecc1ac?w=800&auto=format&fit=crop&q=80",
+    image: "/appliance_manufacturing.png",
     description: "Specially designed for damp and high-vibration washing machine environments, featuring dual-motor running support and robust hermetic sealing."
   },
   ac: {
@@ -93,7 +93,7 @@ const capacitorsData: Record<string, CapacitorDetails> = {
     ],
     applications: "HVAC Systems, Outdoor AC Units, and Heat Pumps.",
     type: "Aluminum Can Dual/Triple Terminals",
-    image: "https://images.unsplash.com/photo-1621905251189-08b45d6a269e?w=800&auto=format&fit=crop&q=80",
+    image: "/panel_building.png",
     description: "ARCOS AC Capacitors feature premium aluminum oil-filled structures and safety interrupters to operate safely under intense HVAC thermal loads."
   },
   submersible: {
@@ -110,7 +110,7 @@ const capacitorsData: Record<string, CapacitorDetails> = {
     ],
     applications: "Water Pumps, Submersible Pumps, Agricultural Irrigation systems.",
     type: "Cylindrical Heavy Resin",
-    image: "https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=800&auto=format&fit=crop&q=80",
+    image: "/pump_manufacturing.png",
     description: "Specifically engineered for agricultural borewells and water pumps, offering high starting torque and stability under severe line voltage fluctuations."
   },
   pfc: {
@@ -127,7 +127,7 @@ const capacitorsData: Record<string, CapacitorDetails> = {
     ],
     applications: "APFC Panels, Power Distribution Systems, Industrial Plants, Commercial Buildings.",
     type: "Box/Square Body or Heavy Cylinder",
-    image: "https://images.unsplash.com/photo-1621905251189-08b45d6a269e?w=800&auto=format&fit=crop&q=80",
+    image: "/panel_building.png",
     description: "ARCOS Power Factor Correction Capacitors help reduce reactive power demand in industrial panels, optimizing utility billing and preventing line overheads."
   },
   square: {
@@ -144,7 +144,7 @@ const capacitorsData: Record<string, CapacitorDetails> = {
     ],
     applications: "Compact panel spacing, specialized machinery mounting.",
     type: "Epoxy Box / Shell Case",
-    image: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=800&auto=format&fit=crop&q=80",
+    image: "/industrial_automation.png",
     description: "Space-saving square casing designed for tight spacing inside industrial control cabinets, featuring customizable terminals and easy screw brackets."
   },
   lighting: {
@@ -161,7 +161,7 @@ const capacitorsData: Record<string, CapacitorDetails> = {
     ],
     applications: "Fluorescent Lamps, Sodium Vapor Lamps, Street Lighting panels, Commercial lighting.",
     type: "Cylindrical Plastic Casing",
-    image: "https://images.unsplash.com/photo-1507499739999-097706ad8914?w=800&auto=format&fit=crop&q=80",
+    image: "/electrical_manufacturing.png",
     description: "Maintains high electrical efficiency in gas-discharge and fluorescent lamp systems by local power factor correction, reducing heat losses."
   }
 };

@@ -28,8 +28,7 @@ const capacitorsList: CapacitorProduct[] = [
       "Long Operational Life",
     ],
     type: "Cylindrical / Wire Lead",
-    image:
-      "https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?w=600&auto=format&fit=crop&q=80",
+    image: "/fan_manufacturing.png",
   },
   {
     id: "motor",
@@ -43,8 +42,7 @@ const capacitorsList: CapacitorProduct[] = [
       "Moisture-resistant resin casing",
     ],
     type: "Cylindrical Dual-terminal",
-    image:
-      "https://images.unsplash.com/photo-1581092160607-ee22621dd758?w=600&auto=format&fit=crop&q=80",
+    image: "/motor_manufacturing.png",
   },
   {
     id: "washing",
@@ -58,8 +56,7 @@ const capacitorsList: CapacitorProduct[] = [
       "Robust lead wires",
     ],
     type: "Cylindrical Plastic Can",
-    image:
-      "https://images.unsplash.com/photo-1527515637462-cff94eecc1ac?w=600&auto=format&fit=crop&q=80",
+    image: "/appliance_manufacturing.png",
   },
   {
     id: "ac",
@@ -73,8 +70,7 @@ const capacitorsList: CapacitorProduct[] = [
       "High temperature threshold",
     ],
     type: "Aluminum Can Dual/Triple Terminals",
-    image:
-      "https://images.unsplash.com/photo-1621905251189-08b45d6a269e?w=600&auto=format&fit=crop&q=80",
+    image: "/panel_building.png",
   },
   {
     id: "submersible",
@@ -88,8 +84,7 @@ const capacitorsList: CapacitorProduct[] = [
       "Consistent capacitance under load",
     ],
     type: "Cylindrical Heavy Resin",
-    image:
-      "https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=600&auto=format&fit=crop&q=80",
+    image: "/pump_manufacturing.png",
   },
   {
     id: "pfc",
@@ -107,8 +102,7 @@ const capacitorsList: CapacitorProduct[] = [
       "Overpressure Safety Mechanism",
     ],
     type: "Box/Square Body or Heavy Cylinder",
-    image:
-      "https://images.unsplash.com/photo-1621905251189-08b45d6a269e?w=600&auto=format&fit=crop&q=80",
+    image: "/panel_building.png",
   },
   {
     id: "square",
@@ -122,8 +116,7 @@ const capacitorsList: CapacitorProduct[] = [
       "Direct screw-in block terminals",
     ],
     type: "Epoxy Box / Shell Case",
-    image:
-      "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=600&auto=format&fit=crop&q=80",
+    image: "/industrial_automation.png",
   },
   {
     id: "lighting",
@@ -137,8 +130,7 @@ const capacitorsList: CapacitorProduct[] = [
       "Long operational life",
     ],
     type: "Cylindrical / Box type",
-    image:
-      "https://images.unsplash.com/photo-1565814329452-e1efa11c5b89?w=600&auto=format&fit=crop&q=80",
+    image: "/electrical_manufacturing.png",
   },
 ];
 

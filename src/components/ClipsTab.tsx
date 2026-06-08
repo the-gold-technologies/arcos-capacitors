@@ -16,7 +16,7 @@ const clipsSubProducts = [
     description:
       "Designed for routing round electrical cords, coaxial cables, and telephone wires securely against masonry or wood.",
     image:
-      "https://images.unsplash.com/photo-1498084393753-b411b2d26b34?w=600&auto=format&fit=crop&q=80",
+      "/cable_clips_round.png",
     specs: "Sizes: 4mm - 12mm | Round Profile",
     features: [
       "Pre-inserted steel nail",
@@ -30,7 +30,7 @@ const clipsSubProducts = [
     description:
       "Perfect flat fit for twin-and-earth cables, flat network cords, and custom electronic wiring paths.",
     image:
-      "https://images.unsplash.com/photo-1558346490-a72e53ae2d4f?w=600&auto=format&fit=crop&q=80",
+      "/cable_clips_flat.png",
     specs: "Sizes: 4mm - 10mm | Flat Profile",
     features: [
       "Snug flat-hug structure",
@@ -44,7 +44,7 @@ const clipsSubProducts = [
     description:
       "Fitted with structural carbon steel nails zinc-plated to resist rust and withstand heavy hammer impact.",
     image:
-      "https://images.unsplash.com/photo-1504148455328-c376907d081c?w=600&auto=format&fit=crop&q=80",
+      "/cable_clips_nails.png",
     specs: "Material: C45 Carbon Steel",
     features: [
       "Extra-hardened heat treatment",
