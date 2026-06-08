@@ -10,14 +10,14 @@ export default function About() {
     <div className="max-w-7xl mx-auto px-6 py-12">
       {/* 1. Header Section */}
       <section className="text-center max-w-3xl mx-auto mb-20">
-        <motion.span 
+        <motion.span
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           className="text-primary text-sm font-bold uppercase tracking-wider"
         >
           Our Story
         </motion.span>
-        <motion.h1 
+        <motion.h1
           initial={{ opacity: 0, y: 15 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.1 }}
@@ -25,13 +25,15 @@ export default function About() {
         >
           About ARCOS Capacitors
         </motion.h1>
-        <motion.p 
+        <motion.p
           initial={{ opacity: 0, y: 15 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.2 }}
           className="text-zinc-600 text-base sm:text-lg mt-6 leading-relaxed"
         >
-          Operating under the parent organization <strong>M.G. Industries</strong>, ARCOS has been at the forefront of manufacturing high-durability capacitors and wire management systems since 2015.
+          M.G. Industries operates under the ARCOS brand and specializes in
+          manufacturing electrical capacitors for diverse industrial and OEM
+          applications.
         </motion.p>
       </section>
 
@@ -43,10 +45,19 @@ export default function About() {
             Our Manufacturing Philosophy
           </h2>
           <p className="text-zinc-700 text-sm sm:text-base leading-relaxed">
-            Since our establishment in 2015, ARCOS has focused on delivering reliable and affordable capacitor solutions without compromising on raw material quality. Our manufacturing philosophy combines precision engineering, advanced automated technologies, premium metallized films, and rigorous multi-stage electrical testing.
+            Since its establishment in 2015, ARCOS has focused on delivering
+            reliable and affordable capacitor solutions without compromising quality.
+            Our manufacturing philosophy combines precision engineering, advanced
+            manufacturing technologies, premium-quality raw materials, and rigorous
+            testing procedures to ensure every product meets customer expectations.
           </p>
           <p className="text-zinc-600 text-sm sm:text-base leading-relaxed">
-            We understand the exact challenges faced by OEM appliance brands and motor manufacturers, such as early capacitor failures, capacitance degradation due to temperature spikes, and unreliable supply chains. Our products are specifically engineered to eliminate these vulnerabilities, offering consistent power factors and extended service lives.
+            We understand the challenges faced by OEM manufacturers and industrial
+            buyers, including capacitor failures, inconsistent performance, voltage
+            fluctuation issues, short product life, and unreliable suppliers. Our
+            products are designed to solve these challenges through dependable
+            performance, consistent capacitance values, long operational life,
+            and superior manufacturing quality.
           </p>
         </div>
 
@@ -55,35 +66,62 @@ export default function About() {
           <div className="absolute inset-0 bg-primary/10 rounded-3xl transform rotate-3 filter blur-md" />
           <div className="relative glassmorphism rounded-3xl p-8 border border-white/10 shadow-xl space-y-6 transform -rotate-1 hover:rotate-0 transition-transform duration-300">
             <h3 className="text-lg font-bold text-zinc-950 flex items-center gap-2">
-              <span className="h-2 w-2 rounded-full bg-primary" /> Key Milestones
+              <span className="h-2 w-2 rounded-full bg-primary" /> Key
+              Milestones
             </h3>
             <div className="space-y-4">
               <div className="flex gap-4">
-                <span className="text-primary font-bold text-sm tracking-widest font-mono">2015</span>
+                <span className="text-primary font-bold text-sm tracking-widest font-mono">
+                  2015
+                </span>
                 <div>
-                  <h4 className="text-zinc-800 text-sm font-semibold">Founding Year</h4>
-                  <p className="text-zinc-500 text-xs mt-0.5">Established M.G. Industries & launched ARCOS brand in Noida.</p>
+                  <h4 className="text-zinc-800 text-sm font-semibold">
+                    Founding Year
+                  </h4>
+                  <p className="text-zinc-500 text-xs mt-0.5">
+                    Established M.G. Industries & launched ARCOS brand in Noida.
+                  </p>
                 </div>
               </div>
               <div className="flex gap-4">
-                <span className="text-primary font-bold text-sm tracking-widest font-mono">2018</span>
+                <span className="text-primary font-bold text-sm tracking-widest font-mono">
+                  2018
+                </span>
                 <div>
-                  <h4 className="text-zinc-800 text-sm font-semibold">Capacity Expansion</h4>
-                  <p className="text-zinc-500 text-xs mt-0.5">Upgraded Noida facility to 20,000 sq. ft. with automatic winders.</p>
+                  <h4 className="text-zinc-800 text-sm font-semibold">
+                    Capacity Expansion
+                  </h4>
+                  <p className="text-zinc-500 text-xs mt-0.5">
+                    Upgraded Noida facility to 20,000 sq. ft. with automatic
+                    winders.
+                  </p>
                 </div>
               </div>
               <div className="flex gap-4">
-                <span className="text-primary font-bold text-sm tracking-widest font-mono">2021</span>
+                <span className="text-primary font-bold text-sm tracking-widest font-mono">
+                  2021
+                </span>
                 <div>
-                  <h4 className="text-zinc-800 text-sm font-semibold">Compliance Accreditations</h4>
-                  <p className="text-zinc-500 text-xs mt-0.5">Acquired CE, RoHS, and ISI marks for full capacitor range.</p>
+                  <h4 className="text-zinc-800 text-sm font-semibold">
+                    Compliance Accreditations
+                  </h4>
+                  <p className="text-zinc-500 text-xs mt-0.5">
+                    Acquired CE, RoHS, and ISI marks for full capacitor range.
+                  </p>
                 </div>
               </div>
               <div className="flex gap-4">
-                <span className="text-primary font-bold text-sm tracking-widest font-mono">2024</span>
+                <span className="text-primary font-bold text-sm tracking-widest font-mono">
+                  2024
+                </span>
                 <div>
-                  <h4 className="text-zinc-800 text-sm font-semibold">OEM Integration</h4>
-                  <p className="text-zinc-500 text-xs mt-0.5">Became key supplier to major Indian HVAC and appliance brands.</p>
+                  <h4 className="text-zinc-800 text-sm font-semibold">
+                    OEM Integration
+                  </h4>
+                  <p className="text-zinc-500 text-xs mt-0.5">
+                    Became key supplier to major Indian HVAC and appliance
+                    brands.
+                  </p>
                 </div>
               </div>
             </div>

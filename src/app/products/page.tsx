@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Cpu, Layers, Boxes } from "lucide-react";
 import CapacitorsTab from "@/components/CapacitorsTab";
@@ -21,6 +21,16 @@ type ProductTab = "capacitors" | "clips" | "ties";
 export default function Products() {
   const [activeTab, setActiveTab] = useState<ProductTab>("capacitors");
   const [quoteProduct, setQuoteProduct] = useState<QuoteProduct | null>(null);
+
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      const params = new URLSearchParams(window.location.search);
+      const tab = params.get("tab");
+      if (tab === "clips" || tab === "ties" || tab === "capacitors") {
+        setActiveTab(tab);
+      }
+    }
+  }, []);
 
   return (
     <div className="relative w-full max-w-7xl mx-auto px-6 py-12">

@@ -23,7 +23,7 @@ const coreStrengthsData = [
   { title: "Precision", desc: "State-of-the-art automated Swiss/German winding machinery.", icon: Cpu },
   { title: "Trust", desc: "Honest customer terms, clear specifications, and transparency.", icon: UserCheck },
   { title: "Consistency", desc: "Every batch matches precise industrial tolerances.", icon: TrendingUp },
-  { title: "Satisfaction", desc: "Fast logistics, active tech support, and OEM flexibility.", icon: Heart },
+  { title: "Customer Satisfaction", desc: "Fast logistics, active tech support, and OEM flexibility.", icon: Heart },
 ];
 
 const containerVariants = {

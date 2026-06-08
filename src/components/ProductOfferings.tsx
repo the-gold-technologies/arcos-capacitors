@@ -21,8 +21,9 @@ export default function ProductOfferings() {
             Diversified Electrical Component Portfolio
           </h2>
           <p className="text-zinc-600 text-sm sm:text-base mt-4">
-            Custom-engineered electrical accessories designed to handle high
-            loads, harsh temperatures, and structural strain.
+            ARCOS manufactures a comprehensive range of electrical and cable
+            management products designed for industrial, commercial, infrastructure,
+            OEM, and electrical installation applications.
           </p>
         </div>
 
@@ -45,10 +46,10 @@ export default function ProductOfferings() {
                 Electrical Capacitors
               </h3>
               <p className="text-zinc-600 text-sm leading-relaxed mt-3 max-w-md">
-                Superior electrical capacitors featuring metallized
-                polypropylene film and built-in safety disconnectors. Designed
-                for appliances, air conditioners, fans, water pumps, and APFC
-                panels.
+                ARCOS manufactures a comprehensive range of electrical capacitors
+                designed for demanding industrial and OEM applications. We offer
+                Fan, Motor Run, Washing Machine, Air Conditioner, Submersible
+                Pump, and Power Factor Correction Capacitors.
               </p>
             </div>
 
@@ -93,9 +94,9 @@ export default function ProductOfferings() {
                 Cable Clips
               </h3>
               <p className="text-zinc-600 text-sm leading-relaxed mt-3">
-                High-impact PE cable clips fitted with tough, zinc-plated steel
-                nails. Resists splitting under hammer impact and maintains hold
-                in wood, masonry, and plasterboard.
+                ARCOS offers cable clips that support secure cable routing and
+                organized electrical installations across residential, commercial,
+                and industrial projects.
               </p>
             </div>
 
@@ -127,9 +128,9 @@ export default function ProductOfferings() {
                 Nylon Cable Ties
               </h3>
               <p className="text-zinc-600 text-sm leading-relaxed mt-3">
-                UV-resistant, flame-retardant Nylon 66 wire management straps.
-                Engineered with self-locking teeth for secure bundle operations
-                in home appliances and industrial panels.
+                ARCOS supplies cable ties for cable bundling, wire management,
+                and industrial fastening applications including electrical panels
+                and wire harnesses.
               </p>
             </div>
 

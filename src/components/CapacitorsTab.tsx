@@ -1,6 +1,5 @@
-"use client";
-
 import React from "react";
+import Link from "next/link";
 import { motion } from "framer-motion";
 import { Cpu, Check, ChevronRight } from "lucide-react";
 
@@ -12,6 +11,7 @@ interface CapacitorProduct {
   applications: string;
   features: string[];
   type: string;
+  image: string;
 }
 
 const capacitorsList: CapacitorProduct[] = [
@@ -21,8 +21,9 @@ const capacitorsList: CapacitorProduct[] = [
     capacitance: "1 - 6 μF",
     voltage: "440V AC",
     applications: "Ceiling Fans, Exhaust Fans, Ventilation Systems",
-    features: ["Low dissipation factor", "Built-in thermal safety", "Long service life"],
+    features: ["Polypropylene Film Dielectric", "Low Power Loss", "Compact Design", "Long Operational Life"],
     type: "Cylindrical / Wire Lead",
+    image: "https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?w=600&auto=format&fit=crop&q=80",
   },
   {
     id: "motor",
@@ -32,6 +33,7 @@ const capacitorsList: CapacitorProduct[] = [
     applications: "Electric Motors, Compressors, Air Blowers",
     features: ["High insulation resistance", "Self-healing metallized film", "Moisture-resistant resin casing"],
     type: "Cylindrical Dual-terminal",
+    image: "https://images.unsplash.com/photo-1581092160607-ee22621dd758?w=600&auto=format&fit=crop&q=80",
   },
   {
     id: "washing",
@@ -41,6 +43,7 @@ const capacitorsList: CapacitorProduct[] = [
     applications: "Washing Machines, Dryers, Appliance Equipment",
     features: ["Dual capacitance options available", "High vibration resistance", "Robust lead wires"],
     type: "Cylindrical Plastic Can",
+    image: "https://images.unsplash.com/photo-1527515637462-cff94eecc1ac?w=600&auto=format&fit=crop&q=80",
   },
   {
     id: "ac",
@@ -50,6 +53,7 @@ const capacitorsList: CapacitorProduct[] = [
     applications: "HVAC Compressors, Outdoor AC Units",
     features: ["Aluminum metal can casing", "Internal explosion-proof disconnector", "High temperature threshold"],
     type: "Aluminum Can Dual/Triple Terminals",
+    image: "https://images.unsplash.com/photo-1621905251189-08b45d6a269e?w=600&auto=format&fit=crop&q=80",
   },
   {
     id: "submersible",
@@ -59,6 +63,7 @@ const capacitorsList: CapacitorProduct[] = [
     applications: "Water Pumps, Submersible Borewell Pumps",
     features: ["High torque start parameters", "Heavy-duty contact terminals", "Consistent capacitance under load"],
     type: "Cylindrical Heavy Resin",
+    image: "https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=600&auto=format&fit=crop&q=80",
   },
   {
     id: "pfc",
@@ -66,8 +71,9 @@ const capacitorsList: CapacitorProduct[] = [
     capacitance: "Available in multiple kVAR ratings",
     voltage: "415V / 440V / 525V AC",
     applications: "Automatic Power Factor Correction (APFC) Panels, Substation Panels",
-    features: ["Saves energy & prevents line losses", "Over-pressure interrupter system", "Modular square or cylindrical body"],
+    features: ["Multiple kVAR Ratings", "415V, 440V & 525V Options", "Low Dielectric Losses", "Harmonic Resistance", "Self-Healing Technology", "Overpressure Safety Mechanism"],
     type: "Box/Square Body or Heavy Cylinder",
+    image: "https://images.unsplash.com/photo-1601524909162-be87252be298?w=600&auto=format&fit=crop&q=80",
   },
   {
     id: "square",
@@ -77,6 +83,17 @@ const capacitorsList: CapacitorProduct[] = [
     applications: "Compact panel spacing, specialized machinery mounting",
     features: ["Compact layout with self-healing tech", "Flexible bracket mounting", "Direct screw-in block terminals"],
     type: "Epoxy Box / Shell Case",
+    image: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=600&auto=format&fit=crop&q=80",
+  },
+  {
+    id: "lighting",
+    name: "Lighting Capacitors",
+    capacitance: "Custom range",
+    voltage: "250V / 440V AC",
+    applications: "Lighting systems and power factor correction applications",
+    features: ["Low power loss", "Self-healing technology", "Long operational life"],
+    type: "Cylindrical / Box type",
+    image: "https://images.unsplash.com/photo-1565814329452-e1efa11c5b89?w=600&auto=format&fit=crop&q=80",
   },
 ];
 
@@ -129,58 +146,83 @@ export default function CapacitorsTab({ onOpenQuote }: CapacitorsTabProps) {
         animate={{ opacity: 1, y: 0 }}
         exit={{ opacity: 0, y: -15 }}
         transition={{ duration: 0.3 }}
-        className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
+        className="flex flex-col gap-6"
       >
         {capacitorsList.map((prod) => (
           <motion.div
             key={prod.id}
-            whileHover={{ y: -4, borderColor: "rgba(210,35,42,0.3)" }}
-            className="bg-white border border-zinc-200 rounded-2xl p-6 flex flex-col justify-between transition-all duration-300 relative group shadow-sm"
+            whileHover={{ borderColor: "rgba(210,35,42,0.3)" }}
+            className="bg-white border border-zinc-200 rounded-[24px] p-6 flex flex-col md:flex-row gap-6 hover:shadow-md transition-all duration-300 relative group"
           >
-            <div>
-              <div className="flex items-start justify-between">
-                <span className="text-[10px] font-semibold text-primary uppercase bg-primary/10 border border-primary/20 px-2.5 py-1 rounded-full">
-                  {prod.type}
-                </span>
-                <Cpu className="h-5 w-5 text-zinc-400 group-hover:text-primary transition-colors duration-300" />
-              </div>
-
-              <h3 className="text-xl font-bold text-zinc-950 mt-4 tracking-tight">{prod.name}</h3>
-              
-              {/* Detailed Spec list */}
-              <div className="mt-4 space-y-2 border-t border-zinc-200/60 pt-4 text-xs">
-                <div className="flex justify-between">
-                  <span className="text-zinc-500">Capacitance:</span>
-                  <span className="text-zinc-800 font-mono font-semibold">{prod.capacitance}</span>
-                </div>
-                <div className="flex justify-between">
-                  <span className="text-zinc-500">Voltage:</span>
-                  <span className="text-zinc-800 font-mono">{prod.voltage}</span>
-                </div>
-                <div className="mt-3">
-                  <span className="text-zinc-500 block">Applications:</span>
-                  <span className="text-zinc-600 leading-relaxed block mt-1 font-medium">{prod.applications}</span>
-                </div>
-              </div>
-
-              <ul className="mt-4 space-y-1.5">
-                {prod.features.map((feat, idx) => (
-                  <li key={idx} className="flex items-center gap-2 text-[11px] text-zinc-600">
-                    <Check className="h-3.5 w-3.5 text-primary shrink-0" />
-                    <span>{feat}</span>
-                  </li>
-                ))}
-              </ul>
+            {/* Left Column: Image wrapper */}
+            <div className="w-full md:w-[220px] h-[150px] rounded-[18px] overflow-hidden shrink-0 bg-zinc-50 relative border border-zinc-200 shadow-inner">
+              <img
+                src={prod.image}
+                alt={prod.name}
+                className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent opacity-85" />
+              <span className="absolute bottom-3 left-3 text-[9px] font-bold text-white uppercase bg-zinc-950/80 px-2 py-0.5 rounded border border-white/10 backdrop-blur-sm">
+                {prod.type}
+              </span>
             </div>
 
-            <div className="mt-6 pt-4 border-t border-zinc-200/60">
-              <button
-                onClick={() => onOpenQuote(prod)}
-                className="w-full justify-center inline-flex items-center gap-2 px-4 py-2.5 bg-zinc-100 border border-zinc-200 hover:border-primary hover:bg-primary text-zinc-900 hover:text-white text-xs font-bold rounded-xl transition-all duration-300"
-              >
-                Request Quote & Info
-                <ChevronRight className="h-3.5 w-3.5" />
-              </button>
+            {/* Right Column: Content */}
+            <div className="flex-1 flex flex-col justify-between">
+              <div>
+                <div className="flex items-center justify-between">
+                  <h3 className="text-lg font-bold text-zinc-950 tracking-tight group-hover:text-primary transition-colors duration-300">
+                    {prod.name}
+                  </h3>
+                  <Cpu className="h-4.5 w-4.5 text-zinc-400 group-hover:text-primary transition-colors duration-300 shrink-0" />
+                </div>
+
+                <div className="grid grid-cols-1 md:grid-cols-12 gap-4 mt-3">
+                  {/* Applications & Features */}
+                  <div className="md:col-span-8 space-y-2">
+                    <p className="text-zinc-600 text-xs leading-relaxed">
+                      <strong>Applications:</strong> {prod.applications}
+                    </p>
+                    <ul className="flex flex-wrap gap-x-4 gap-y-1.5 pt-1">
+                      {prod.features.slice(0, 3).map((feat, idx) => (
+                        <li key={idx} className="flex items-center gap-1.5 text-[10px] text-zinc-500">
+                          <Check className="h-3.5 w-3.5 text-primary shrink-0" />
+                          <span>{feat}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+
+                  {/* Spec values */}
+                  <div className="md:col-span-4 bg-zinc-50/85 border border-zinc-200 rounded-xl p-3 flex flex-col justify-center gap-1.5 text-center md:text-left">
+                    <div className="flex justify-between items-center text-xs">
+                      <span className="text-zinc-500 font-bold uppercase tracking-wider text-[9px]">Capacitance</span>
+                      <span className="text-zinc-800 font-extrabold font-mono">{prod.capacitance}</span>
+                    </div>
+                    <div className="border-t border-zinc-200/60 my-1"></div>
+                    <div className="flex justify-between items-center text-xs">
+                      <span className="text-zinc-500 font-bold uppercase tracking-wider text-[9px]">Voltage</span>
+                      <span className="text-zinc-800 font-semibold font-mono">{prod.voltage}</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Bottom buttons row */}
+              <div className="mt-4 pt-4 border-t border-zinc-100 flex justify-end gap-3">
+                <Link
+                  href={`/products/capacitors/${prod.id}`}
+                  className="px-5 py-2 bg-zinc-50 hover:bg-zinc-100 border border-zinc-200 text-zinc-800 text-xs font-bold rounded-xl transition-all duration-300"
+                >
+                  View Details
+                </Link>
+                <button
+                  onClick={() => onOpenQuote(prod)}
+                  className="px-5 py-2 bg-primary hover:bg-primary-dark text-white text-xs font-bold rounded-xl transition-all duration-300 shadow-sm"
+                >
+                  Get Custom Estimate
+                </button>
+              </div>
             </div>
           </motion.div>
         ))}

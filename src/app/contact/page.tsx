@@ -15,15 +15,15 @@ import {
 
 function ContactFormContent() {
   const searchParams = useSearchParams();
-  const initialType = searchParams.get("type") === "quote" ? "quote" : "general";
+  const initialType = searchParams.get("type") === "quote" ? "Get Quote" : "Get Quote";
   
-  const [inquiryType, setInquiryType] = useState<string>(initialType);
   const [formSubmitted, setFormSubmitted] = useState(false);
   const [formData, setFormData] = useState({
     name: "",
     email: "",
     phone: "",
     company: "",
+    inquiryType: initialType,
     product: "capacitors",
     message: ""
   });
@@ -45,6 +45,7 @@ function ContactFormContent() {
         email: "",
         phone: "",
         company: "",
+        inquiryType: "Get Quote",
         product: "capacitors",
         message: ""
       });
@@ -53,32 +54,10 @@ function ContactFormContent() {
 
   return (
     <div className="relative">
-      {/* Type Switcher tabs */}
-      <div className="flex gap-2 p-1 bg-zinc-200/50 border border-zinc-200 rounded-xl mb-6">
-        <button
-          type="button"
-          onClick={() => setInquiryType("general")}
-          className={`flex-1 py-2.5 text-xs font-semibold rounded-lg transition-colors ${
-            inquiryType === "general" ? "bg-white text-zinc-950 shadow-sm" : "text-zinc-500 hover:text-zinc-800"
-          }`}
-        >
-          General Inquiry
-        </button>
-        <button
-          type="button"
-          onClick={() => setInquiryType("quote")}
-          className={`flex-1 py-2.5 text-xs font-semibold rounded-lg transition-colors ${
-            inquiryType === "quote" ? "bg-primary text-white shadow-sm" : "text-zinc-500 hover:text-zinc-800"
-          }`}
-        >
-          Request Bulk Quote
-        </button>
-      </div>
-
       <form onSubmit={handleSubmit} className="space-y-4">
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
           <div>
-            <label className="block text-zinc-650 text-xs font-semibold mb-2">Full Name</label>
+            <label className="block text-zinc-650 text-xs font-semibold mb-2">Name</label>
             <input
               type="text"
               name="name"
@@ -90,22 +69,21 @@ function ContactFormContent() {
             />
           </div>
           <div>
-            <label className="block text-zinc-650 text-xs font-semibold mb-2">Corporate Email</label>
+            <label className="block text-zinc-650 text-xs font-semibold mb-2">Company Name</label>
             <input
-              type="email"
-              required
-              name="email"
-              value={formData.email}
+              type="text"
+              name="company"
+              value={formData.company}
               onChange={handleInputChange}
               className="w-full bg-zinc-50 border border-zinc-200 focus:bg-white focus:border-primary focus:shadow-[0_0_12px_rgba(210,35,42,0.15)] rounded-xl py-3 px-4 text-sm text-zinc-900 focus:outline-none transition-all duration-300"
-              placeholder="name@company.com"
+              placeholder="Company Name"
             />
           </div>
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
           <div>
-            <label className="block text-zinc-650 text-xs font-semibold mb-2">Phone / Mobile</label>
+            <label className="block text-zinc-650 text-xs font-semibold mb-2">Contact Number (Mandatory)</label>
             <input
               type="tel"
               required
@@ -117,39 +95,51 @@ function ContactFormContent() {
             />
           </div>
           <div>
-            <label className="block text-zinc-650 text-xs font-semibold mb-2">Company Name</label>
+            <label className="block text-zinc-650 text-xs font-semibold mb-2">Email Address</label>
             <input
-              type="text"
-              name="company"
-              value={formData.company}
+              type="email"
+              required
+              name="email"
+              value={formData.email}
               onChange={handleInputChange}
               className="w-full bg-zinc-50 border border-zinc-200 focus:bg-white focus:border-primary focus:shadow-[0_0_12px_rgba(210,35,42,0.15)] rounded-xl py-3 px-4 text-sm text-zinc-900 focus:outline-none transition-all duration-300"
-              placeholder="Company Ltd"
+              placeholder="name@email.com"
             />
           </div>
         </div>
 
-        {inquiryType === "quote" && (
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
           <div>
-            <label className="block text-zinc-650 text-xs font-semibold mb-2">Product Category</label>
+            <label className="block text-zinc-650 text-xs font-semibold mb-2">Inquiry Type</label>
+            <select
+              name="inquiryType"
+              value={formData.inquiryType}
+              onChange={handleInputChange}
+              className="w-full bg-zinc-50 border border-zinc-200 focus:bg-white focus:border-primary rounded-xl py-3.5 px-4 text-sm text-zinc-800 focus:outline-none transition-all duration-300"
+            >
+              <option value="Get Quote">Get Quote</option>
+              <option value="Get Price List">Get Price List</option>
+              <option value="OEM Enquiry">OEM Enquiry</option>
+              <option value="Dealer / Distributor Enquiry">Dealer / Distributor Enquiry</option>
+            </select>
+          </div>
+          <div>
+            <label className="block text-zinc-650 text-xs font-semibold mb-2">Product Requirement</label>
             <select
               name="product"
               value={formData.product}
               onChange={handleInputChange}
               className="w-full bg-zinc-50 border border-zinc-200 focus:bg-white focus:border-primary rounded-xl py-3.5 px-4 text-sm text-zinc-800 focus:outline-none transition-all duration-300"
             >
-              <option value="capacitors">Electrical Capacitors (Fan, Motor, AC)</option>
-              <option value="clips">PE Plastic Cable Clips</option>
-              <option value="ties">Nylon 66 Cable Ties</option>
-              <option value="oem">Private Label / Custom OEM</option>
+              <option value="capacitors">Capacitors</option>
+              <option value="clips">Cable Clips</option>
+              <option value="ties">Cable Ties</option>
             </select>
           </div>
-        )}
+        </div>
 
         <div>
-          <label className="block text-zinc-650 text-xs font-semibold mb-2">
-            {inquiryType === "quote" ? "Describe Your Quantity & Spec Requirements" : "Message"}
-          </label>
+          <label className="block text-zinc-650 text-xs font-semibold mb-2">Message</label>
           <textarea
             name="message"
             required
@@ -157,11 +147,7 @@ function ContactFormContent() {
             onChange={handleInputChange}
             rows={4}
             className="w-full bg-zinc-50 border border-zinc-200 focus:bg-white focus:border-primary focus:shadow-[0_0_12px_rgba(210,35,42,0.15)] rounded-xl py-3 px-4 text-sm text-zinc-900 focus:outline-none transition-all duration-300 resize-none"
-            placeholder={
-              inquiryType === "quote"
-                ? "Please include desired microfarad (uF) ratings, target quantities, and voltage specifications..."
-                : "How can we help you today?"
-            }
+            placeholder="Please enter your query or specification details..."
           />
         </div>
 
@@ -226,10 +212,10 @@ export default function Contact() {
             <h3 className="text-zinc-950 font-bold text-lg flex items-center gap-2 mb-4">
               <Building className="h-5 w-5 text-primary shrink-0" /> Noida Plant Address
             </h3>
-            <p className="text-zinc-600 text-sm leading-relaxed">
+            <p className="text-zinc-650 text-sm leading-relaxed">
               ARCOS (M.G. Industries)<br />
-              Plot No. 20, Phase-3, Sector 63,<br />
-              Noida, Uttar Pradesh, 201301, India
+              C-28, Sector-63, Noida,<br />
+              Uttar Pradesh, India
             </p>
             <div className="mt-4 flex items-center gap-2.5 text-xs text-zinc-500">
               <Clock className="h-4 w-4 text-zinc-400" />
@@ -248,16 +234,21 @@ export default function Contact() {
               <div className="flex items-center gap-3">
                 <Phone className="h-5 w-5 text-zinc-400 shrink-0" />
                 <div>
-                  <span className="text-zinc-500 text-xs block">Sales Hotline</span>
-                  <span className="text-zinc-850 font-semibold">+91 99999 XXXXX</span>
+                  <span className="text-zinc-500 text-xs block">Sales Hotline & WhatsApp</span>
+                  <a href="https://wa.me/919891758499" target="_blank" rel="noopener noreferrer" className="text-zinc-850 font-semibold hover:text-primary transition-colors">
+                    +91 98917 58499
+                  </a>
                 </div>
               </div>
               <div className="flex items-center gap-3">
                 <Mail className="h-5 w-5 text-zinc-400 shrink-0" />
                 <div>
-                  <span className="text-zinc-500 text-xs block">Official Email</span>
-                  <a href="mailto:info@arcoscapacitors.com" className="text-primary-light hover:underline font-semibold">
-                    info@arcoscapacitors.com
+                  <span className="text-zinc-500 text-xs block">Sales & Support</span>
+                  <a href="mailto:sales@arcoscapacitors.com" className="text-primary-light hover:underline font-semibold block">
+                    sales@arcoscapacitors.com
+                  </a>
+                  <a href="mailto:nitingupta.8@hotmail.com" className="text-zinc-550 text-xs hover:underline block mt-0.5">
+                    nitingupta.8@hotmail.com
                   </a>
                 </div>
               </div>

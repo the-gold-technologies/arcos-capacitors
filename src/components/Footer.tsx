@@ -145,18 +145,20 @@ export default function Footer() {
                 <MapPin className="h-5 w-5 text-primary shrink-0 mt-0.5" />
                 <span>
                   ARCOS M.G. Industries,<br />
-                  20,000 Sq. Ft. Modern Facility,<br />
-                  Sector 63, Noida, Uttar Pradesh, India
+                  C-28, Sector-63, Noida,<br />
+                  Uttar Pradesh, India
                 </span>
               </li>
               <li className="flex items-center gap-3">
                 <Phone className="h-5 w-5 text-primary shrink-0" />
-                <span>+91 99999 XXXXX / +91 120 XXXXXXX</span>
+                <a href="tel:+919891758499" className="hover:text-white transition-colors duration-200">
+                  +91 98917 58499
+                </a>
               </li>
               <li className="flex items-center gap-3">
                 <Mail className="h-5 w-5 text-primary shrink-0" />
-                <a href="mailto:info@arcoscapacitors.com" className="hover:text-white transition-colors duration-200">
-                  info@arcoscapacitors.com
+                <a href="mailto:sales@arcoscapacitors.com" className="hover:text-white transition-colors duration-200">
+                  sales@arcoscapacitors.com
                 </a>
               </li>
             </ul>

@@ -17,7 +17,7 @@ export default function VisionMission() {
           <div>
             <h3 className="text-2xl font-bold text-white">Our Vision</h3>
             <p className="text-zinc-400 text-sm sm:text-base leading-relaxed mt-4">
-              To become a trusted global manufacturer of electrical capacitors and allied electrical products through continuous engineering innovation, process excellence, and customer-centric manufacturing partnerships.
+              To become a trusted global manufacturer of electrical capacitors and allied electrical products through innovation, engineering excellence, and customer-centric manufacturing.
             </p>
           </div>
         </div>
@@ -30,7 +30,7 @@ export default function VisionMission() {
           <div>
             <h3 className="text-2xl font-bold text-white">Our Mission</h3>
             <p className="text-zinc-400 text-sm sm:text-base leading-relaxed mt-4">
-              To supply highly reliable, cost-effective, and technically advanced electrical components that help OEMs improve their overall appliance efficiencies, reduce power factor failures, and maintain stable grids.
+              To provide reliable, cost-effective, and technologically advanced electrical components that help customers improve product performance and operational efficiency.
             </p>
           </div>
         </div>

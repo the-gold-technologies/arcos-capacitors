@@ -9,18 +9,26 @@ import {
   Zap, 
   TrendingUp, 
   Activity, 
-  Layers 
+  Layers,
+  Wind,
+  Tv,
+  Users,
+  Building2,
+  Briefcase
 } from "lucide-react";
 
 const industriesList = [
-  { name: "Electrical Appliance", icon: Cpu },
-  { name: "HVAC & AC Systems", icon: Settings },
-  { name: "Water Pumps & Motors", icon: Wrench },
-  { name: "Electronics & PCB Assemblies", icon: Cpu },
-  { name: "Renewable Solar Energy", icon: Zap },
-  { name: "Power Distribution", icon: TrendingUp },
-  { name: "Industrial Automation", icon: Activity },
-  { name: "Infrastructure & Grid", icon: Layers },
+  { name: "Fan Manufacturers", icon: Wind },
+  { name: "Motor Manufacturers", icon: Settings },
+  { name: "Pump Manufacturers", icon: Wrench },
+  { name: "Appliance Manufacturers", icon: Tv },
+  { name: "Electrical Product Manufacturers", icon: Cpu },
+  { name: "Electrical Dealers & Distributors", icon: Users },
+  { name: "Industrial Automation Companies", icon: Activity },
+  { name: "Renewable Energy Companies", icon: Zap },
+  { name: "Infrastructure Projects", icon: Building2 },
+  { name: "Panel Builders", icon: Layers },
+  { name: "OEM Manufacturers", icon: Briefcase },
 ];
 
 export default function IndustriesGrid() {
@@ -36,15 +44,16 @@ export default function IndustriesGrid() {
         <div className="flex flex-col lg:flex-row lg:items-end justify-between mb-16 gap-6">
           <div>
             <span className="text-primary text-sm font-bold uppercase tracking-wider">
-              Markets We Serve
+              Industries Served
             </span>
             <h2 className="text-3xl sm:text-4xl font-bold tracking-tight text-zinc-950 mt-3">
-              Powering Diverse Industrial Domains
+              ARCOS products are trusted by a wide range of industries
             </h2>
           </div>
           <p className="text-zinc-600 text-sm sm:text-base max-w-md">
-            From delicate domestic electronics to rugged outdoor power
-            distribution, ARCOS provides robust connectivity and capacitance.
+            ARCOS products are trusted by a wide range of industries including
+            fan, motor, pump, appliance, and electrical product manufacturers,
+            dealers, panel builders, and OEM partners.
           </p>
         </div>
 

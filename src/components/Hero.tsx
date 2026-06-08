@@ -39,8 +39,7 @@ export default function Hero() {
             className="mt-6 text-base sm:text-lg text-zinc-600 leading-relaxed max-w-xl"
           >
             Precision-engineered electrical components designed for OEMs,
-            industrial buyers, and global distribution. Engineered for superior
-            performance, durability, and long service life.
+            manufacturers, distributors, and industrial applications.
           </motion.p>
 
           <motion.div

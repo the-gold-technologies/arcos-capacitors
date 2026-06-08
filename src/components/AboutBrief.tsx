@@ -5,12 +5,12 @@ import Link from "next/link";
 import { Cpu, CheckCircle, ArrowRight } from "lucide-react";
 
 const briefStrengths = [
-  "ISO 9001 Certified Processes",
-  "Advanced Testing Infrastructure",
-  "OEM & Private Label Support",
-  "CE, RoHS & ISI Standards",
-  "Premium Grade Raw Materials",
-  "Competitive Direct-to-OEM Pricing",
+  "Quality culture driven by innovation",
+  "Premium raw materials & strict QC",
+  "25,000 units daily capacity",
+  "ISO Certified manufacturing",
+  "CE, RoHS & ISI compliant products",
+  "OEM & private label support",
 ];
 
 export default function AboutBrief() {
@@ -65,11 +65,24 @@ export default function AboutBrief() {
             Reliable Electrical Products Built on Precision Engineering
           </h2>
           <p className="text-zinc-400 text-sm sm:text-base leading-relaxed mt-6">
-            ARCOS, a leading brand of M.G. Industries, manufactures a
-            comprehensive range of electrical capacitors, cable clips, and cable
-            ties. We solve operational challenges like voltage instability, high
-            leakage currents, and short product lives by utilizing high-end
-            automated manufacturing processes.
+            ARCOS, a brand of M.G. Industries, is a leading manufacturer and
+            supplier of premium-quality electrical capacitors engineered for
+            superior performance, durability, and long service life. Established
+            in 2015, the company has built a strong reputation among OEM
+            manufacturers, appliance brands, motor manufacturers, pump
+            manufacturers, and electrical distributors by consistently
+            delivering reliable products backed by quality-focused manufacturing
+            processes.
+          </p>
+          <p className="text-zinc-400 text-sm sm:text-base leading-relaxed mt-4">
+            Operating from a modern 20,000 sq. ft. manufacturing facility in
+            Noida, ARCOS manufactures up to 25,000 capacitors per day using
+            advanced machinery, stringent quality control systems, and
+            innovation-driven engineering. Our commitment to quality,
+            reliability, performance, and customer satisfaction enables us to
+            serve customers across India&apos;s electrical, electronics, home
+            appliance, industrial automation, renewable energy, and
+            infrastructure sectors.
           </p>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-8 w-full">

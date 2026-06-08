@@ -17,8 +17,7 @@ export default function CtaBanner() {
           </h2>
           <p className="mt-4 text-zinc-100 text-sm sm:text-base opacity-90 max-w-xl">
             Get customized quotation lists, price rates, and order estimates
-            for your custom specifications. Contact our sales office in Noida
-            today.
+            for your custom specifications. Get Quote or Get Price List directly from our sales representatives.
           </p>
         </div>
 
