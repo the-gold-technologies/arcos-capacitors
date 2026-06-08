@@ -2,12 +2,12 @@
 
 import React from "react";
 import { motion } from "framer-motion";
+import { EASE } from "@/lib/motion";
 import {
   Cpu,
   Settings,
   Wrench,
   Zap,
-  TrendingUp,
   Activity,
   Layers,
   Wind,
@@ -86,17 +86,39 @@ const industriesList = [
   },
 ];
 
+const containerVariants = {
+  hidden: {},
+  visible: { transition: { staggerChildren: 0.07, delayChildren: 0.1 } },
+};
+
+const cardVariants = {
+  hidden: { opacity: 0, y: 24, scale: 0.97 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    scale: 1,
+    transition: { duration: 0.55, ease: EASE },
+  },
+};
+
 export default function IndustriesGrid() {
   return (
     <section className="relative py-20 px-6 overflow-hidden">
       <div className="absolute inset-0 bg-[#f4f4f5]/60 border-y border-zinc-200 z-0" />
 
-      {/* Ambient Red glow background blobs - shifted offscreen for edge lighting */}
+      {/* Ambient Red glow background blobs */}
       <div className="absolute top-[20%] -left-[15%] h-[400px] w-[400px] rounded-full bg-primary/6 filter blur-[120px] pointer-events-none z-0" />
       <div className="absolute bottom-[15%] -right-[15%] h-[400px] w-[400px] rounded-full bg-primary/5 filter blur-[110px] pointer-events-none z-0" />
 
       <div className="max-w-7xl mx-auto relative z-10">
-        <div className="flex flex-col lg:flex-row lg:items-end justify-between mb-16 gap-6">
+        {/* Header */}
+        <motion.div
+          initial={{ opacity: 0, y: 24 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-60px" }}
+          transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
+          className="flex flex-col lg:flex-row lg:items-end justify-between mb-16 gap-6"
+        >
           <div>
             <span className="text-primary text-sm font-bold uppercase tracking-wider">
               Industries Served
@@ -110,42 +132,52 @@ export default function IndustriesGrid() {
             fan, motor, pump, appliance, and electrical product manufacturers,
             dealers, panel builders, and OEM partners.
           </p>
-        </div>
+        </motion.div>
 
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+        {/* Grid */}
+        <motion.div
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, margin: "-80px" }}
+          className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6"
+        >
           {industriesList.map((ind, idx) => {
             const Icon = ind.icon;
             return (
               <motion.div
                 key={idx}
+                variants={cardVariants}
                 whileHover={{
-                  y: -5,
-                  boxShadow: "0 12px 30px -10px rgba(0,0,0,0.15)",
+                  y: -6,
+                  boxShadow: "0 16px 36px -10px rgba(0,0,0,0.18)",
+                  transition: { duration: 0.3, ease: [0.16, 1, 0.3, 1] },
                 }}
-                className={`relative overflow-hidden rounded-2xl h-[160px] sm:h-[200px] group border border-zinc-200/50 shadow-sm transition-all duration-300 ${ind.gridClass}`}
+                className={`relative overflow-hidden rounded-2xl h-[160px] sm:h-[200px] group border border-zinc-200/50 shadow-sm ${ind.gridClass} will-change-transform`}
               >
                 {/* Background image */}
                 <img
                   src={ind.image}
                   alt={ind.name}
-                  className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                  className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-108"
+                  style={{ transition: "transform 0.7s cubic-bezier(0.16, 1, 0.3, 1)" }}
                 />
                 {/* Dark gradient overlay */}
-                <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/40 to-transparent transition-opacity duration-300 group-hover:opacity-90" />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/40 to-transparent transition-opacity duration-500 group-hover:opacity-95" />
 
-                {/* Content over image */}
+                {/* Content */}
                 <div className="absolute inset-0 p-4 sm:p-5 flex flex-col justify-between items-start z-10">
-                  <div className="h-8 w-8 rounded-lg bg-white/10 backdrop-blur-md flex items-center justify-center border border-white/20 text-white group-hover:bg-primary transition-colors duration-300 shrink-0">
+                  <div className="h-8 w-8 rounded-lg bg-white/10 backdrop-blur-md flex items-center justify-center border border-white/20 text-white group-hover:bg-primary group-hover:border-primary/60 transition-all duration-400 ease-out shrink-0">
                     <Icon className="h-4 w-4" />
                   </div>
-                  <span className="text-white font-bold text-xs sm:text-sm md:text-base leading-snug tracking-tight text-left drop-shadow-sm">
+                  <span className="text-white font-bold text-xs sm:text-sm md:text-base leading-snug tracking-tight text-left drop-shadow-sm group-hover:translate-y-[-2px] transition-transform duration-300 ease-out">
                     {ind.name}
                   </span>
                 </div>
               </motion.div>
             );
           })}
-        </div>
+        </motion.div>
       </div>
     </section>
   );
