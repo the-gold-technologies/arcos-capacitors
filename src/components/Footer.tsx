@@ -2,11 +2,18 @@
 
 import React from "react";
 import Link from "next/link";
-import { Mail, Phone, MapPin, Award, CheckCircle, ShieldCheck } from "lucide-react";
+import {
+  Mail,
+  Phone,
+  MapPin,
+  Award,
+  CheckCircle,
+  ShieldCheck,
+} from "lucide-react";
 
 export default function Footer() {
   return (
-    <footer className="relative mt-20 bg-[#0d0d11] border-t border-dark-border overflow-hidden">
+    <footer className="relative bg-[#0d0d11] border-t border-dark-border overflow-hidden mt-12">
       {/* Non-boring clip-path diagonal spacer at the top */}
       <div className="absolute top-0 left-0 right-0 h-4 bg-primary/20 transform -skew-y-1 origin-top-left" />
 
@@ -23,16 +30,22 @@ export default function Footer() {
                   className="h-full w-full transform group-hover:scale-105 transition-transform duration-300"
                 >
                   <defs>
-                    <linearGradient id="footerLogoGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <linearGradient
+                      id="footerLogoGrad"
+                      x1="0%"
+                      y1="0%"
+                      x2="100%"
+                      y2="100%"
+                    >
                       <stop offset="0%" stopColor="#ff4d55" />
                       <stop offset="60%" stopColor="#d2232a" />
                       <stop offset="100%" stopColor="#8d1317" />
                     </linearGradient>
                     <filter id="footerGlow">
-                      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+                      <feGaussianBlur stdDeviation="3" result="coloredBlur" />
                       <feMerge>
-                        <feMergeNode in="coloredBlur"/>
-                        <feMergeNode in="SourceGraphic"/>
+                        <feMergeNode in="coloredBlur" />
+                        <feMergeNode in="SourceGraphic" />
                       </feMerge>
                     </filter>
                   </defs>
@@ -61,7 +74,9 @@ export default function Footer() {
               </div>
             </Link>
             <p className="text-zinc-400 text-sm leading-relaxed mt-2">
-              ARCOS (M.G. Industries) is a premier manufacturer of high-end capacitors, cable clips, and cable ties, engineered for reliability, safety, and durability since 2015.
+              ARCOS (M.G. Industries) is a premier manufacturer of high-end
+              capacitors, cable clips, and cable ties, engineered for
+              reliability, safety, and durability since 2015.
             </p>
             {/* Certifications Badges */}
             <div className="flex flex-wrap gap-2 mt-4">
@@ -115,11 +130,26 @@ export default function Footer() {
             <ul className="flex flex-col gap-3">
               {[
                 { name: "Fan Capacitors", href: "/products/capacitors/fan" },
-                { name: "Motor Run Capacitors", href: "/products/capacitors/motor" },
-                { name: "Washing Machine Capacitors", href: "/products/capacitors/washing" },
-                { name: "Air Conditioner Capacitors", href: "/products/capacitors/ac" },
-                { name: "Submersible Pump Capacitors", href: "/products/capacitors/submersible" },
-                { name: "Power Factor Correction", href: "/products/capacitors/pfc" },
+                {
+                  name: "Motor Run Capacitors",
+                  href: "/products/capacitors/motor",
+                },
+                {
+                  name: "Washing Machine Capacitors",
+                  href: "/products/capacitors/washing",
+                },
+                {
+                  name: "Air Conditioner Capacitors",
+                  href: "/products/capacitors/ac",
+                },
+                {
+                  name: "Submersible Pump Capacitors",
+                  href: "/products/capacitors/submersible",
+                },
+                {
+                  name: "Power Factor Correction",
+                  href: "/products/capacitors/pfc",
+                },
                 { name: "Cable Clips & Ties", href: "/products?tab=clips" },
               ].map((prod) => (
                 <li key={prod.name}>
@@ -144,20 +174,28 @@ export default function Footer() {
               <li className="flex items-start gap-3">
                 <MapPin className="h-5 w-5 text-primary shrink-0 mt-0.5" />
                 <span>
-                  ARCOS M.G. Industries,<br />
-                  C-28, Sector-63, Noida,<br />
+                  ARCOS M.G. Industries,
+                  <br />
+                  C-28, Sector-63, Noida,
+                  <br />
                   Uttar Pradesh, India
                 </span>
               </li>
               <li className="flex items-center gap-3">
                 <Phone className="h-5 w-5 text-primary shrink-0" />
-                <a href="tel:+919891758499" className="hover:text-white transition-colors duration-200">
+                <a
+                  href="tel:+919891758499"
+                  className="hover:text-white transition-colors duration-200"
+                >
                   +91 98917 58499
                 </a>
               </li>
               <li className="flex items-center gap-3">
                 <Mail className="h-5 w-5 text-primary shrink-0" />
-                <a href="mailto:sales@arcoscapacitors.com" className="hover:text-white transition-colors duration-200">
+                <a
+                  href="mailto:sales@arcoscapacitors.com"
+                  className="hover:text-white transition-colors duration-200"
+                >
                   sales@arcoscapacitors.com
                 </a>
               </li>
@@ -167,11 +205,29 @@ export default function Footer() {
 
         {/* Bottom copyright section */}
         <div className="border-t border-dark-border mt-12 pt-8 flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-zinc-500">
-          <p>© {new Date().getFullYear()} ARCOS Capacitors (M.G. Industries). All rights reserved.</p>
+          <p>
+            © {new Date().getFullYear()} ARCOS Capacitors (M.G. Industries). All
+            rights reserved.
+          </p>
           <div className="flex gap-6">
-            <Link href="/privacy" className="hover:text-zinc-300 transition-colors">Privacy Policy</Link>
-            <Link href="/terms" className="hover:text-zinc-300 transition-colors">Terms of Service</Link>
-            <Link href="/sitemap" className="hover:text-zinc-300 transition-colors">Sitemap</Link>
+            <Link
+              href="/privacy"
+              className="hover:text-zinc-300 transition-colors"
+            >
+              Privacy Policy
+            </Link>
+            <Link
+              href="/terms"
+              className="hover:text-zinc-300 transition-colors"
+            >
+              Terms of Service
+            </Link>
+            <Link
+              href="/sitemap"
+              className="hover:text-zinc-300 transition-colors"
+            >
+              Sitemap
+            </Link>
           </div>
         </div>
       </div>

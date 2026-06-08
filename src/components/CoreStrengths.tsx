@@ -84,6 +84,11 @@ export default function CoreStrengths() {
               {/* Light Sweep Reflection Effect */}
               <div className="absolute inset-0 w-1/2 h-full bg-gradient-to-r from-transparent via-primary/5 to-transparent -translate-x-full group-hover:translate-x-[200%] transition-transform duration-1000 ease-out z-0 pointer-events-none" />
 
+              {/* Background Watermark Icon */}
+              <div className="absolute right-[-10px] bottom-[-10px] w-24 h-24 opacity-[0.03] group-hover:opacity-[0.06] group-hover:scale-105 transition-all duration-500 pointer-events-none text-primary z-0">
+                <Icon className="w-full h-full" strokeWidth={0.7} />
+              </div>
+
               <div className="h-10 w-10 rounded-xl bg-primary/10 group-hover:bg-primary/20 flex items-center justify-center border border-primary/20 text-primary transition-colors duration-300 z-10">
                 <motion.div
                   className="flex items-center justify-center"
