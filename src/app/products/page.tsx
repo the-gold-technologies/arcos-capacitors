@@ -27,7 +27,9 @@ export default function Products() {
       const params = new URLSearchParams(window.location.search);
       const tab = params.get("tab");
       if (tab === "clips" || tab === "ties" || tab === "capacitors") {
-        setActiveTab(tab);
+        setTimeout(() => {
+          setActiveTab(tab);
+        }, 0);
       }
     }
   }, []);

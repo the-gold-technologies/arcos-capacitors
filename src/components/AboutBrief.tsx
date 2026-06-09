@@ -4,7 +4,7 @@ import React from "react";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { Cpu, CheckCircle, ArrowRight } from "lucide-react";
-import { EASE, fadeUpVariants, slideInLeft, slideInRight, staggerContainer, cardVariants } from "@/lib/motion";
+import { EASE, fadeUpVariants, slideInLeft, slideInRight, staggerContainer } from "@/lib/motion";
 
 const briefStrengths = [
   "Quality culture driven by innovation",

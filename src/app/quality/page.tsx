@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import { FileText, Settings, HeartHandshake } from "lucide-react";
+import { Settings, HeartHandshake } from "lucide-react";
 
 const ISOLogo = () => (
   <svg
@@ -550,7 +550,7 @@ export default function QualityCertifications() {
         </div>
 
         <div className="lg:col-span-7 space-y-4">
-          {testingChecks.map((check, idx) => {
+          {testingChecks.map((check) => {
             const Icon = check.icon;
             return (
               <div

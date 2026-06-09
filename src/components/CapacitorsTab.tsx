@@ -1,7 +1,7 @@
 import React from "react";
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { Cpu, Check, ChevronRight } from "lucide-react";
+import { Check } from "lucide-react";
 
 interface CapacitorProduct {
   id: string;

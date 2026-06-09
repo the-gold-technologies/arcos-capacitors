@@ -7,9 +7,7 @@ import {
   Cpu, 
   Check, 
   ShieldCheck, 
-  FileText,
-  Mail,
-  Zap,
+  Zap, 
   Hammer
 } from "lucide-react";
 import QuoteDrawer from "@/components/QuoteDrawer";
